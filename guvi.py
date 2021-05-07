@@ -38,3 +38,6 @@ for x in range(0,len(a)):
 print(result)
 
 #making chage here to see what happens
+list1 = [1,2,3,4,5]
+mapped_list = list(map(lambda x: 5*x, list1))
+print(mapped_list)
