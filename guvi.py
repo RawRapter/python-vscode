@@ -36,3 +36,5 @@ result = 0
 for x in range(0,len(a)):
     result += ord(a[x])
 print(result)
+
+#making chage here to see what happens
