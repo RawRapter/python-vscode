@@ -32,7 +32,7 @@ for k in range(1,y+1):
     print(" "*y1,end="")
     print("* "*k)
     y1 -= 1
-
+print("")
 """
 4) Basic Program to count number of digit in an integer
 """
@@ -45,7 +45,7 @@ def count(g):
         c +=1
     return c
 print(count(g))
-
+print("")
 """
 5) Basic program to check if number is Armstrong
 """
@@ -73,3 +73,37 @@ def armstrong(num):
 
 x = armstrong(num1)
 print(x)
+print("")
+"""
+6) Basic Program to check if number is palindrome or not
+"""
+num2 = 121
+def palindrome(d):
+    remainder = 0
+    revnum = 0
+    n = len(str(d))
+    copynum2 = d
+    while copynum2 != 0:
+        remainder = copynum2%10
+        revnum = revnum * 10 + remainder
+        copynum2 //= 10
+    if d == revnum:
+        return "Given Numer {} is palindrome".format(d)
+    else:
+        return "Given Numer {} is not palindrome".format(d)
+print(palindrome(num2))
+print("")
+"""
+7) Basic Program to find fibonacci till specific place
+"""
+e = 8 #we want first 8 fibonaci number
+def fibonacci(e):
+    r,t,count1 = 0,1,0
+    print(r,"",t,end=" ")
+    while(count1<e):
+        sum7 = r + t
+        print(sum7,end=" ")
+        r = t
+        t = sum7
+        count1 += 1
+print(fibonacci(e))
