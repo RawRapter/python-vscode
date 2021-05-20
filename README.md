@@ -6,6 +6,8 @@
         3) Basic Program Equilateral triangle
         4) Basic Program to count number of digit in an integer
         5) Basic program to check if number is Armstrong
+        6) Basic Program to check if number is palindrome or not
+        7) Basic Program to find fibonacci till specific place
 2) Program Sites Folder :
     1) Multiple Guvi Site: https://www.guvi.in/ programs
     2) First Program is to check print function working or not which is also generally first program to do on any site
