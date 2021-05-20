@@ -96,7 +96,7 @@ print("")
 """
 7) Basic Program to find fibonacci till specific place
 """
-e = 8 #we want first 8 fibonaci number
+e = 8 #we want first 8 fibonacci number
 def fibonacci(e):
     r,t,count1 = 0,1,0
     print(r,"",t,end=" ")
@@ -107,3 +107,49 @@ def fibonacci(e):
         t = sum7
         count1 += 1
 print(fibonacci(e))
+"""
+8) Basic Program to convert paragraph into dictionary, Word Key and word length Value
+"""
+lis = "I am anant arun interested in data analysis and devops"
+dic = [{i : len(i)} for i in lis.split(" ")]
+print(dic)
+print()
+a1,a2,a3 = 2,6,3
+z = max(a1,a2,a3) #just checking max working or not
+print(z)
+print()
+"""
+9) Basic Program to calculate simple interest
+"""
+principle = float(input("Enter Principle Amount: "))
+rate = float(input("Enter Rate: "))
+time = int(input("Enter TIme: "))
+def SimpleInterest(principle,rate,time):
+    amount = principle * (1 + (rate * time)/100)
+    return amount
+amt = SimpleInterest(principle,rate,time)
+print("Total Amount in SImple Interest is: ",amt)
+print()
+"""
+10) Basic Program to calculate Compound interest
+"""
+principle1 = float(input("Enter Principle Amount: "))
+rate1 = float(input("Enter Rate: "))
+time1 = int(input("Enter TIme: "))
+def CompoundInterest(principle1,rate1,time1):
+    amount1 = principle1 * (1 + rate1/100) ** time1
+    return amount1
+amt1 = CompoundInterest(principle1,rate1,time1)
+print("Total Amount in Compound Interest is ",amt1)
+print()
+"""
+11) Basic Program to calculate Area of Circle
+"""
+import math
+radius = 5
+pie1 = math.pi
+def circle(radius):
+    area = pie1 * pow(radius,2)
+    return area
+area1 = circle(radius)
+print("Area of the circle is {}".format(round(area1,2)))
