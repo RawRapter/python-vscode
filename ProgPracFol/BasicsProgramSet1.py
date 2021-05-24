@@ -94,7 +94,7 @@ def palindrome(d):
 print(palindrome(num2))
 print("")
 """
-7) Basic Program to find fibonacci till specific place
+7) Basic Program to find fibonacci till specific place Method 1, Method 2 at 14
 """
 e = 8 #we want first 8 fibonacci number
 def fibonacci(e):
@@ -153,3 +153,46 @@ def circle(radius):
     return area
 area1 = circle(radius)
 print("Area of the circle is {}".format(round(area1,2)))
+"""
+12) Basic Program to find all prime numbers in an Interval
+"""
+import math
+print("Enter interval in which you want to have all the prime numbers")
+start = int(input("Starting Number: "))
+end = int(input("Ending Number: "))
+for i in range(start,end + 1):
+    if i > 1:
+        for j in range(2,int(math.sqrt(i)) + 1):
+            if i % j == 0:
+                break
+        else:
+            print(i)
+    else:
+         print("Don't Give One or Negative Number")
+"""
+13) Basic Program to find the number is prime number or not
+"""
+num3 = int(input("Enter a number: "))
+flag1 = False
+for i in range(2,int(math.sqrt(num3))):
+    if num3 % i == 0:
+        flag1 = True
+        break
+if flag1 == True:
+    print("Number is not a prime number")
+else:
+    print("Number is a Prime Number")
+"""
+14) Basic Program to get a nth fibonacci Number Method 2
+"""
+num4 = int(input("Enter Number till you want fibonacci list"))
+def fibonnaci2(num4):
+    if num4 < 0:
+        print("Incorrect number please write positive number")
+    elif num4 == 1:
+        return 0
+    elif num4 == 2:
+        return 1
+    else:
+        return fibonnaci2(num4 -1) + fibonnaci2(num4 - 2)
+print("Fibonacci Number at ",num4," is ",fibonnaci2(num4))
