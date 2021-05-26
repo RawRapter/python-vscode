@@ -185,7 +185,7 @@ else:
 """
 14) Basic Program to get a nth fibonacci Number Method 2
 """
-num4 = int(input("Enter Number till you want fibonacci list"))
+num4 = int(input("Enter Number at which you want fibonacci number"))
 def fibonnaci2(num4):
     if num4 < 0:
         print("Incorrect number please write positive number")
@@ -196,3 +196,27 @@ def fibonnaci2(num4):
     else:
         return fibonnaci2(num4 -1) + fibonnaci2(num4 - 2)
 print("Fibonacci Number at ",num4," is ",fibonnaci2(num4))
+"""
+15) Basic Program to check if given number is fibonacci
+"""
+num5 = int(input("Enter Number to check if given number is fibonacci"))
+def fibonnaci3(d):
+    def isperfectsquare(x):
+        s = int(math.sqrt(x))
+        return s*s == x
+    def fibonaci(d):
+        return isperfectsquare(d*d*5 + 4) or isperfectsquare(d*d*5 - 4)
+    if fibonaci(d) == True:
+        return "{} is a fibonacci number".format(d)
+    else:
+        return "{} is not a fibonacci number".format(d)
+zk = fibonnaci3(num5)
+print(zk)
+"""
+16) Basic Program to write ASCII value of a Character
+"""
+num6 = str(input("Enter Number you want to get ASCII value of "))
+def getASCII(x):
+    return ord(x)
+zl = getASCII(num6)
+print("ASCII value of {0} is {1}".format(num6,zl))
