@@ -1,3 +1,4 @@
+#This File contains Basic Programs
 """
 1) Basic Factorial Program using function and recursion
 """
@@ -220,3 +221,17 @@ def getASCII(x):
     return ord(x)
 zl = getASCII(num6)
 print("ASCII value of {0} is {1}".format(num6,zl))
+"""
+17) Basic Program to find Sum of squares of first n natural numbers
+"""
+number = int(input())
+def sqsum(x):
+    sum = x * (x + 1) * (2*x + 1) / 6
+    return sum
+print(sqsum(number))
+"""
+18) Basic Program to find Sum of cube of first n natural numbers using Lambda
+"""
+number1 = int(input())
+sqsum1 = lambda x : (x * (x + 1) / 2) ** 2
+print(sqsum1(number1))
