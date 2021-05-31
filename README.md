@@ -17,6 +17,10 @@
         14) Basic Program to get a nth fibonacci Number Method 2
         15) Basic Program to check if given number is fibonacci
         16) Basic Program to write ASCII value of a Character
+        17) Basic Program to find Sum of squares of first n natural numbers
+        18) Basic Program to find Sum of cube of first n natural numbers using Lambda
+   2) Basic Program Site 2:
+        1) Python Program to find sum of array in multiple ways
 2) Program Sites Folder :
     1) Multiple Guvi Site: https://www.guvi.in/ programs
     2) First Program is to check print function working or not which is also generally first program to do on any site
