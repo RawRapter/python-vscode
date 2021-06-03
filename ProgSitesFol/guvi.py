@@ -1,7 +1,9 @@
+#First
 i1 = str(input())
 for i in i1:
     print(i, end=" ")
 
+#Second
 i1 = "anant"
 for i in range(0,len(i1)):
     if i == len(i1) - 1:
@@ -12,6 +14,7 @@ for i in range(0,3):
     x = input()
     print(x)
 
+#Third
 tuples = [
     (-2.3391885553668246e-10, 8.473071450645254e-10),
     (-2.91634014818891e-10, 8.913956007163883e-10), 
@@ -23,21 +26,22 @@ tuples = [
 result = sum(t[0] for t in tuples)
 print(result)
 
-# a,b = input().split()
+#Fourth
+a,b = input().split()
 
-# if a > b:
-#     print(b)
-# else:
-#     print(a)
+if a > b:
+    print(b)
+else:
+    print(a)
 
+#Fifth
 a = 'abc'
-
 result = 0
 for x in range(0,len(a)):
     result += ord(a[x])
 print(result)
 
-#making chage here to see what happens
+#Sixth
 list1 = [1,2,3,4,5]
 mapped_list = list(map(lambda x: 5*x, list1))
 print(mapped_list)

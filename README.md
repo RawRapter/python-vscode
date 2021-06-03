@@ -21,7 +21,24 @@
         18) Basic Program to find Sum of cube of first n natural numbers using Lambda
    2) Basic Program Site 2:
         1) Python Program to find sum of array in multiple ways
+        2) Basic Program to find largest element in an array
+        3) Basic Program for array rotation
+        4) Basic Program to Split the array and add the first part to the end
+        5) Program for Find reminder of array multiplication divided by n
+        6) Basic Program to check if given array is Monotonic. An array A is monotone increasing if for all i <= j, A[i] <= A[j]. An array A is monotone decreasing if for all i <= j, A[i] >= A[j].
+    3) Basics Program Site 3:
+        1) Basic program to interchange first and last elements in a list
+        2) Basic program to swap two elements in a list(input list and 2 places to be swapped, taking first elements as position one(not index))
+        3) Basic Ways to find length of list
+        4) Basic Ways to check if element exists in list
+        5) Basic Different ways to clear a list in Python
+        6) Basic program Reversing a List
+        7) Basic program to find sum of elements in list
+        8) Basic Multiply all numbers in the list
+        9) Basic program to find smallest number in a list
+        10) Basic program to find largest number in a list
+        11) Basic program to find second largest number in a list
+        12) Basic program to find N largest elements from a list
 2) Program Sites Folder :
     1) Multiple Guvi Site: https://www.guvi.in/ programs
-    2) First Program is to check print function working or not which is also generally first program to do on any site
-    3) Second program is to reverse a digit
+    2) Second program is to reverse a digit - guvi

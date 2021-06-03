@@ -1,4 +1,7 @@
-#This file contains Basic Program related to Array
+"""
+#This file contains Basic Program related to Array, Questiona take from Geeks of Geeks
+"""
+
 """
 1) Python Program to find sum of array in multiple ways
 """
