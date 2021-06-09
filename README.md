@@ -39,6 +39,21 @@
         10) Basic program to find largest number in a list
         11) Basic program to find second largest number in a list
         12) Basic program to find N largest elements from a list
+        13) Basic program to print even numbers in a list
+        14) Basic program to print odd numbers in a List
+        15) Basic program to print positive numbers in a list
+        16) Basic program to print negative numbers in a list
+        17) Basic program to print all positive numbers in a range
+        18) Basic program to print all positive numbers in a range
+        19) Basic Remove multiple elements from a list in Python
+        20) Basic Remove empty List from List
+    4) Basics Program Site 4:
+        1) Basic program to add two Matrices
+        2) Basic program to multiply two matrices
+        3) Basic program for Matrix Product
+        4) Adding and Subtracting Matrices in Python
+        5) Basic Transpose a matrix in Single line in Python
+        6) Basic Matrix creation of n*n
 2) Program Sites Folder :
     1) Multiple Guvi Site: https://www.guvi.in/ programs
     2) Second program is to reverse a digit - guvi

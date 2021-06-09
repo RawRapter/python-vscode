@@ -7,6 +7,11 @@ L1 = [12, 35, 9, 56, 24]
 L2 = [1, 2, 3]
 L3 = [10,20,30,40,50]
 L4 = [2,3,7,13,17,23]
+L5 = [-1,1,-2,2,-3,3,-4,4]
+L7 = [12,[], 35,[], 9,[], 56, 24]
+L6 = [[2 ,1, 3],
+ [4, 5, 7],
+ [6, 9, 8]]
 #Import Libraries that can be required in the programs
 import functools as fs
 import numpy as np
@@ -291,3 +296,220 @@ def Nlargest1(x,n1):
         newx.append(max)
     return newx
 print(Nlargest1(L1,n1))
+
+"""
+13) Basic program to print even numbers in a list
+"""
+#Method 1, naive way 1 , creating new empty list and appending even elements
+def EvenElementList1(x):
+    x1 =[]
+    for i in x:
+        if i % 2 == 0:
+            x1.append(i)
+    return x1
+print(EvenElementList1(L1))
+#Time taken:  0.0009970664978027344
+
+#Method 2, naive way 2, directly printing the elements, here none will be there in output as there is no return and 2 print
+def EvenElementList3(x):
+    for i in x:
+        if i % 2 == 0:
+            print(i,end=" ")
+
+print(EvenElementList3(L1))
+#Time taken:  0.0019915103912353516
+
+#Method 3, Naive way 3 Using while loop, here none will be there in output as there is no return and 2 print
+def EvenElementList2(x):
+    i = 0
+    while i < len(x):
+        if x[i] % 2 == 0:
+            print(x[i],end=" ")
+        i += 1
+print(EvenElementList2(L1))
+#Time taken:  0.0019927024841308594
+
+#Method 4, Pythonic way using lambda
+def EvenElementList4(x):
+    x1 = list(filter(lambda x: (x % 2 == 0), x))
+    return x1
+print(EvenElementList4(L1))
+#Time taken:  0.0009965896606445312
+
+#Method 5, Pythonic way using list comprehension
+def EvenElementList(x):
+    return [i for i in x if i % 2 == 0]
+print(EvenElementList(L1))
+#Time taken:  0.000997304916381836
+
+"""
+14) Basic program to print odd numbers in a List
+"""
+#Method 1, naive way 1 , creating new empty list and appending odd elements
+def OddElementList1(x):
+    x1 =[]
+    for i in x:
+        if i % 2 != 0:
+            x1.append(i)
+    return x1
+print(OddElementList1(L1))
+#Time taken:  0.0029916763305664062
+
+#Method 2, naive way 2, directly printing the elements, here none will be there in output as there is no return and 2 print
+def OddElementList3(x):
+    for i in x:
+        if i % 2 != 0:
+            print(i,end=" ")
+
+print(OddElementList3(L1))
+#Time taken:  0.0009980201721191406
+
+#Method 3, Naive way 3 Using while loop, here none will be there in output as there is no return and 2 print
+def OddElementList2(x):
+    i = 0
+    while i < len(x):
+        if x[i] % 2 != 0:
+            print(x[i],end=" ")
+        i += 1
+print(OddElementList2(L1))
+#Time taken:  0.001972675323486328
+
+#Method 4, Pythonic way using lambda
+def OddElementList4(x):
+    x1 = list(filter(lambda x: (x % 2 != 0), x))
+    return x1
+print(OddElementList4(L1))
+#Time taken:  0.000993490219116211
+
+#Method 5, Pythonic way using list comprehension
+def OddElementList(x):
+    return [i for i in x if i % 2 != 0]
+print(OddElementList(L1))
+#Time taken:  0.0010035037994384766
+
+"""
+15) Basic program to print positive numbers in a list
+"""
+#Method 1 , List Comprehension
+def PositiveList(x):
+    return [ i for i in x if i > 0]
+print(PositiveList(L5))
+#Time taken:  0.0009975433349609375
+
+#Method 2, using filter
+def PositiveList1(x):
+    return list(filter(lambda i : i > 0 , x))
+print(PositiveList1(L5))
+#Time taken:  0.0009953975677490234
+
+#Method 3 , Naive Method using for loop
+def PositiveList2(x):
+    for i in x:
+        if i >= 0:
+            print(i, end = " ")
+print(PositiveList2(L5))
+#Time taken:  0.0019981861114501953
+
+#Method 4 , Naive Method using while loop
+def PositiveList3(x):
+    i = 0
+    while i < len(x):
+        if x[i] >= 0:
+            print(x[i], end = " ")
+        i += 1    
+print(PositiveList3(L5))
+#Time taken:  0.0019979476928710938
+
+"""
+16) Basic program to print negative numbers in a list
+"""
+#Method 1 , List Comprehension
+def PositiveList(x):
+    return [ i for i in x if i < 0]
+print(PositiveList(L5))
+#Time taken:  0.0009975433349609375
+
+#Method 2, using filter
+def PositiveList1(x):
+    return list(filter(lambda i : i < 0 , x))
+print(PositiveList1(L5))
+#Time taken:  0.0009953975677490234
+
+#Method 3 , Naive Method using for loop
+def PositiveList2(x):
+    for i in x:
+        if i < 0:
+            print(i, end = " ")
+print(PositiveList2(L5))
+#Time taken:  0.0019981861114501953
+
+#Method 4 , Naive Method using while loop
+def PositiveList3(x):
+    i = 0
+    while i < len(x):
+        if x[i] < 0:
+            print(x[i], end = " ")
+        i += 1    
+print(PositiveList3(L5))
+#Time taken:  0.0019979476928710938
+
+"""
+17) Basic program to print all positive numbers in a range
+"""
+n1 = int(input("Start: "))
+n2 = int(input("End: "))
+
+#Method 1, Using List Comprehension
+pos = [i for in range(n1,n2 + 1) if i > 0]
+print(pos)
+#Time taken:  2.662982940673828
+
+#Method 2, iterating
+for i in range(n1,n2 + 1):
+    if i > 0:
+        print(i, end = " ")
+#Time taken:  1.2213096618652344
+
+"""
+18) Basic program to print all positive numbers in a range
+"""
+n1 = int(input("Start: "))
+n2 = int(input("End: "))
+
+#Method 1, Using List Comprehension
+pos = [i for i in range(n1,n2 + 1) if i < 0]
+print(pos)
+#Time taken:  1.6453924179077148
+
+#Method 2, iterating
+for i in range(n1,n2 + 1):
+    if i < 0:
+        print(i, end = " ")
+#Time taken:  1.3188226222991943
+
+"""
+19) Basic Remove multiple elements from a list in Python
+"""
+
+#Method 1, using List comprehension
+print("Our List: \n",L1)
+n1 = int(input("Enter number of element you want to remove: "))
+x = list(map(int, input("Enter {n} value(s): ").split()))
+#x = [int(x) for x in input("Enter multiple value: ").split()]
+main1 = [i for i in L1 if i not in x]
+print(main1)
+
+"""
+20) Basic Remove empty List from List
+"""
+#Method 1, using list comprehension
+print(L7)
+x = [i for i in L7 if i!=[]]
+print(x)
+#Time taken:  0.0009961128234863281
+
+#Method 2 , using filter
+print(L7)
+x = list(filter(None,L7))
+print(x)
+#Time taken:  0.000995635986328125
