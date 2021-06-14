@@ -143,3 +143,29 @@ n = int(input("Enter value of N(Must be perfefct square): "))
 matrix1 = [list(range(1 + n*i, 1+n*(i+1))) for i in range(n)]
 print(matrix1)
 #Time taken:  0.6289224624633789
+
+"""
+7) Basic program to Get Kth Column of Matrix for n*n matrix
+"""
+#Method 1, List Comprehension
+kth = int(input("Give Column number to select Options(0,1,2): "))
+lst = [i[kth] for i in L1]
+print(lst)
+
+#Method 2, using zip
+kth = int(input("Give Column number to select Options(0,1,2): "))
+#In Python 2, zip returned a list. In Python 3, zip returns an iterable object.
+#If we subscript zip then TypeError: 'zip' object is not subscriptable will come
+#So, [kth] is used after creating list
+lst = list(zip(*L1))[kth]
+print(lst)
+
+"""
+8) Basic program to Vertical Concatenation in Matrix
+"""
+j1 = [['anant', 'good'], ['arun', 'great']]
+
+#Method 1 , using zip and list comprehension
+j3 = [x + y for x,y in zip(*j1)]
+print(j3)
+#Time taken:  0.0009992122650146484

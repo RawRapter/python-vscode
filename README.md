@@ -47,6 +47,15 @@
         18) Basic program to print all positive numbers in a range
         19) Basic Remove multiple elements from a list in Python
         20) Basic Remove empty List from List
+        21) Basic Program to Cloning or Copying a list
+        22) Basic Program to Count occurrences of an element in a list
+        23) basic Program to Remove empty tuples from a list
+        24) Basic Program to print duplicates from a list of integers
+        25) Basic program to find Cumulative sum of a list
+        26) Basic program to Sum of number digits in List
+        27) Basic program to written first name and last name from the list in Pythonic way
+        28) Basic Program to Break a list into chunks of size N in Python
+        29) Basic program to Sort the values of first list using second list in Python
     4) Basics Program Site 4:
         1) Basic program to add two Matrices
         2) Basic program to multiply two matrices
@@ -54,6 +63,8 @@
         4) Adding and Subtracting Matrices in Python
         5) Basic Transpose a matrix in Single line in Python
         6) Basic Matrix creation of n*n
+        7) Basic program to Get Kth Column of Matrix for n*n matrix
+        8) Basic program to Vertical Concatenation in Matrix
 2) Program Sites Folder :
     1) Multiple Guvi Site: https://www.guvi.in/ programs
     2) Second program is to reverse a digit - guvi

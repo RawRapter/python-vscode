@@ -2,7 +2,7 @@
 This File contains Pythons Program related to List, Questiona take from Geeks of Geeks.
 Some Libraries are imported before all the Programs Please check them before trying any program
 """
-#Creating some List for testing
+#Creating some inputs for testing
 L1 = [12, 35, 9, 56, 24]
 L2 = [1, 2, 3]
 L3 = [10,20,30,40,50]
@@ -12,10 +12,17 @@ L7 = [12,[], 35,[], 9,[], 56, 24]
 L6 = [[2 ,1, 3],
  [4, 5, 7],
  [6, 9, 8]]
+L8 = [1,2,3,2,3,1,6,7,6,7,4,5,8,8,9,6,9,8,9,4]
+tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'), ('krishna', 'akbar', '45'), ('',''),()]
+
 #Import Libraries that can be required in the programs
 import functools as fs
+from typing import Counter
 import numpy as np
 import math
+
+from numpy.core.fromnumeric import sort
+
 """
 1) Basic program to interchange first and last elements in a list
 """
@@ -513,3 +520,197 @@ print(L7)
 x = list(filter(None,L7))
 print(x)
 #Time taken:  0.000995635986328125
+
+"""
+21) Basic Program to Cloning or Copying a list
+"""
+#Method 1, using extend method
+def ListCopy(x):
+    C1 = []
+    C1.extend(x)
+    return C1
+C1 = ListCopy(L1)
+#Time taken:  0.000993967056274414
+
+#Method 2, Using slicing method
+def ListCopy1(x):
+    return x[0:]
+C1 = ListCopy1(L1)
+print(C1)
+#Time taken:  0.001990795135498047
+
+#Method 3 , using list
+def ListCopy2(x):
+    C1 = list(x)
+    return C1
+C1 = ListCopy2(L1)
+print(C1)
+#Time taken:  0.0019910335540771484
+
+#Method 4, using list comprehension
+def ListCopy3(x):
+    C1 = [i for i in x]
+    return C1
+C1 = ListCopy3(L1)
+print(C1)
+#Time taken:  0.00199127197265625
+
+#Method 4, usinng append
+def ListCopy4(x):
+    C1 = []
+    for i in x: 
+        C1.append(i) #If without loop is used then it will be list in list
+    return C1
+C1 = ListCopy4(L1)
+print(C1)
+#Time taken:  0.0020072460174560547
+
+"""
+22) Basic Program to Count occurrences of an element in a list
+"""
+#Method 1, using Normal Approach
+def countele(x,lst):
+    c = 0
+    for i in lst:
+        if i == x:
+            c += 1
+    return c
+x = 5 #Element to be counted , you can take as input too
+print("Element {0} is repeated {1} times".format(x,countele(x,L8)))
+#Time taken:  0.001987457275390625
+
+#Method 2, using count()
+def countele1(lst,x):
+    return lst.count(x)
+x = 8 #Element to be counted , you can take as input too
+print("Element {0} is repeated {1} times".format(x,countele1(L8,x)))
+#Time taken:  0.0019941329956054688
+
+#Method 3, using counter()
+def countele2(lst,x):
+    d= Counter(lst)
+    return d[x]
+x = 8 #Element to be counted , you can take as input too
+print("Element {0} is repeated {1} times".format(x,countele2(L8,x)))
+#Time taken:  0.001987457275390625
+
+"""
+23) basic Program to Remove empty tuples from a list
+"""
+#Method 1, using tuples
+def RemoveEmptyTuple(x):
+    t = [ i for i in x if i]
+    return t
+print(RemoveEmptyTuple(tuples))
+#Time taken:  0.0029990673065185547
+
+#Method 2, using filter
+def RemoveEmptyTuple1(x):
+    return list(filter(None,x))
+print(RemoveEmptyTuple1(tuples))
+#Time taken:  0.0010187625885009766
+
+"""
+24) Basic Program to print duplicates from a list of integers
+"""
+#Method 1, converting to set
+def RemoveDuplicate(x):
+    s = set(x)
+    return s
+print(RemoveDuplicate(L8))
+#Time taken:  0.0009968280792236328
+
+"""
+25) Basic program to find Cumulative sum of a list
+"""
+#Method 1, Naive method
+def ListCumulativeSpum(x):
+    l = []
+    l.append(x[0])
+    for j in range(1,len(x)):
+        l.append(x[j-1] + x[j])
+    return l
+print(ListCumulativeSpum(L1))
+#Time taken:  0.0009996891021728516
+
+#Method 2, Naive method 2
+def ListCumulativeSpum2(x):
+    nl = []
+    j = 0
+    for i in range(len(x)):
+        j += x[i]
+        nl.append(j)
+    return nl
+print(ListCumulativeSpum2(L2))
+#Time taken:  0.0019876956939697266
+
+#Method 3, using list comprehension
+def ListCumulativeSpum1(x):
+        l = []
+        i = len(x)
+        lst = [sum(x[0:i:1]) for i in range(0,i+1)]
+        return lst[1:]
+print(ListCumulativeSpum1(L2))
+#Time taken:  0.0009891986846923828
+
+"""
+26) Basic program to Sum of number digits in List
+"""
+OL = [12, 67, 98, 34]
+
+#Method 1, using list , map , lambda function, sum
+def SOND(x):
+    return list(map(lambda i:sum(int(j) for j in str(i)),x))
+print(SOND(OL))
+#Time taken:  0.004986286163330078
+
+#Method 2, using Naive method i.e loop
+def SOND1(x):
+    SONDlist = []
+    for i in x:
+        sum = 0
+        for j in str(i):
+            sum += int(j)
+        SONDlist.append(sum)
+    return SONDlist
+print(SOND1(OL))
+
+"""
+27) Basic program to written first name and last name from the list in Pythonic way
+"""
+name = ['anant arun','aaryan madan','ganpati rai','akash biju']
+FirstName = [i.split()[0] for i in name]
+LastName = [i.split()[-1] for i in name]
+print(FirstName)
+print(LastName)
+#Time taken:  0.002993345260620117
+
+"""
+28) Basic Program to Break a list into chunks of size N in Python
+"""
+names = ['anant arun','aaryan madan','ganpati rai','akash biju','data','analysis','Mtech','college','professor','father','mother']
+
+#Method 1, using list comprehension
+def breaklist(x,n):
+    return [x[i*n:(i+1)*n] for i in range((len(x)+ n - 1)//n)]
+print(breaklist(names,4))
+#Output - [['anant arun', 'aaryan madan', 'ganpati rai', 'akash biju'], 
+# ['data', 'analysis', 'Mtech', 'college'], ['professor', 'father', 'mother']]
+#Time taken:  0.001994609832763672
+
+#Method 2, using yield
+def breaklist1(x,n):
+    for i in range(0,len(x),n):
+        yield x[i:i+n]
+print(list(breaklist1(names,4)))
+#Time taken:  0.0019915103912353516
+
+"""
+29) Basic program to Sort the values of first list using second list in Python
+"""
+list1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
+list2 = [ 0,   1,   1,    0,   1,   2,   2,   0,   1]
+#Method 1, using zip function
+zipz = list(zip(list2,list1))
+zipz1 = [x for _,x in sorted(zipz)]
+print(zipz1)
