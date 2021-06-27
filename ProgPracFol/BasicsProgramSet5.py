@@ -2,12 +2,16 @@
 This set is related to string python programs, question taken from GeeksOfGeeks
 """
 #All Import
+from itertools import count
 import re
+from collections import Counter
 #Strings Created:
 a = 'anna'
 b = 'anant'
 c = 'bumbum'
 str = "My Name is Anant Arun"
+stra = "My My Name Name Name is is is is Anant Anant Arun"
+strb = "My_Name_is_Anant_Arun"
 
 """
 1) Program to check if a string is palindrome or not
@@ -146,3 +150,111 @@ for i in range(len(str)):
     if i !=n:
         new_str = new_str + str[i]
 print(new_str)
+
+"""
+5) Basic program to Check if a Substring is Present in a Given String
+"""
+#Method 1, using in operator
+if "Anant" in str:
+    print("It exists")
+else:
+    print("No not present")
+#Time taken:  0.0009982585906982422
+
+#Method 2, using regex
+xe = re.search("Anant",str)
+if xe:
+    print("yes exists")
+else:
+    print("Doesnt exist")
+#Time taken:  0.0009989738464355469
+
+#Method 3, using find
+if (str.find("Anant")) == -1:
+    print("Not Exists")
+else:
+    print("Exists")
+#Time taken:  0.0019922256469726562
+
+"""
+6) Basic program for Words Frequency in String Shorthands
+"""
+#Method 1, using regex & dictionary comprehension
+def wordcount(x):
+    res = re.split('\s',x)
+    return {key:x.count(key) for key in res}
+print(wordcount(stra))
+#Time taken:  0.002000093460083008
+
+#Method 2, using string split instead of regex
+def wordcount1(x):
+    return {key:x.count(key) for key in x.split()}
+print(wordcount1(stra))
+#Time taken:  0.0009968280792236328
+
+#Method 3, using counter
+def wordcount2(x):
+    return Counter(x.split())
+print(wordcount2(stra))
+#Time taken:  0.001996278762817383
+
+"""
+7) Basic program to Convert Snake case to Pascal case
+"""
+#Method 1, using regex
+def PascalCase(x):
+    return re.sub('_','',x)
+print(PascalCase(strb))
+#Time taken:  0.000997781753540039
+
+#Method 2, using replace()
+def PascalCase1(x):
+    return x.replace('_','')
+print(PascalCase1(strb))
+#Time taken:  0.0009965896606445312
+
+"""
+8) Basic Program to Find length of a string in python
+"""
+#Method 1, using len()
+print(len(strb))
+#Time taken:  0.0009980201721191406
+
+#Method 2, iterating over it through for loop
+c = 0
+for i in strb:
+    c += 1
+print(c)
+#Time taken:  0.0009899139404296875
+
+#Method 3, iterating over it through while loop
+c = 0
+while(c <= len(strb)):
+    c +=1
+print(c)
+#Time taken:  0.0010058879852294922
+
+#method 4, while loop and string slice
+c = 0
+while str[c:]:
+    c +=1
+print(c)
+#Time taken:  0.0009963512420654297
+
+"""
+9)Basic program to print even length words in a string
+"""
+#Method 1, iterative method
+def EvenLengthWords(x):
+    l = x.split()
+    for i in l:
+        if len(i)%2 == 0:
+            print(i)
+print(EvenLengthWords(str))
+#Time taken:  0.0009968280792236328
+
+#Method 2, using lise comprehension
+def EvenLengthWords1(x):
+    return [i for i in x.split() if len(i)%2 == 0]
+print(EvenLengthWords(str))
+#Time taken:  0.0010204315185546875

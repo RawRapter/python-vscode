@@ -45,3 +45,14 @@ print(result)
 list1 = [1,2,3,4,5]
 mapped_list = list(map(lambda x: 5*x, list1))
 print(mapped_list)
+
+#Seventh
+number = int(input("Enter the integer number: "))
+revs_number = 0    
+while (number > 0):  
+    # Logic  
+    remainder = number % 10  
+    revs_number = (revs_number * 10) + remainder  
+    number = number // 10  
+
+print("The reverse number is : {}".format(revs_number))  
