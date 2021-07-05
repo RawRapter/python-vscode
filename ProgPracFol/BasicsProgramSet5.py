@@ -258,3 +258,81 @@ def EvenLengthWords1(x):
     return [i for i in x.split() if len(i)%2 == 0]
 print(EvenLengthWords(str))
 #Time taken:  0.0010204315185546875
+
+"""
+10) Basic program to accept the strings which contains all vowels
+"""
+VowelSet = {'a','e','i','o','u'}
+#Method 1, Normal Approach - comparing set
+def VowelCheck(x):
+    set2 = set({})
+    for i in x:
+        if i in VowelSet:
+            set2.add(i)
+    if VowelSet == set2:
+        return "String Accepted, all vowels there"
+    else:
+        return "String not accepted all vowel not there"
+print(VowelCheck(str))
+#Time taken:  0.0020024776458740234
+
+#Method 2, using intersection, set and len
+def VowelCheck1(x):
+    if len(set(x.lower()).intersection("aeiou")) >= 5:
+        return "String Accepted, all vowels there"
+    else:
+        return "String not accepted all vowel not there"
+print(VowelCheck1(str))
+#Time taken:  0.0009982585906982422
+
+"""
+11) Basic Program to Count the Number of matching characters in a pair of string
+"""
+#Method 1, using 2 loops comparing each data then adding it in set then finding it's length
+def CountMatchCharacter(x,y):
+    matchset = set({})
+    for i in x:
+        for j in y:
+            if i == j:
+                matchset.add(i)
+    return len(matchset)
+print("No. of matches: ",CountMatchCharacter(a,b))
+#Time taken:  0.00099945068359375
+
+#Method 2, converting string to set and using & operation
+def CountMatchCharacter1(x,y):
+    setx = set(x)
+    sety = set(y)
+    setmatch = setx & sety
+    return len(setmatch)
+print("No. of matches: ",CountMatchCharacter1(a,b))
+#Time taken:  0.0009961128234863281
+
+#Method 3, using regular expression, this will count duplicates
+def CountMatchCharacter2(x,y):
+    c = 0
+    for i in x:
+        if re.search(i,y):
+            c += 1
+    return c
+print("No. of matches: ",CountMatchCharacter2(a,b))
+
+"""
+12) Basic program to Remove all duplicates from a given string in Python
+"""
+#Method 1, coonverting to set and join
+def RemoveStringDuplicates(x):
+    return "".join(set(x))
+print(RemoveStringDuplicates(str))
+
+#Method 2, removing duplicates and getting result in order using for loop and empty string
+def RemoveStringDuplicates1(x):
+    t = ""
+    for i in x:
+        if i in t:
+            pass
+        else:
+            t += i
+    return t
+print(RemoveStringDuplicates1(str))
+#Time taken:  0.0009965896606445312

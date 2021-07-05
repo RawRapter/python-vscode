@@ -6,7 +6,7 @@
 1) Python Program to find sum of array in multiple ways
 """
 l1 = [1,2,3,4]
-#Using function
+#Method 1, Using function
 def arraysum(x):
     sum = 0
     for i in x:
@@ -14,11 +14,11 @@ def arraysum(x):
     return sum
 print("Sum of elements of array is ",arraysum(l1))
 
-#Using inbuilt sum function
+#Method 2, Using inbuilt sum function
 ans = sum(l1)
 print("Sum is ",ans)
 
-#using lambda and reduce
+#Mehod 3, using lambda and reduce
 import functools as fs
 print("Here the sum is ",fs.reduce(lambda x,y: x + y , l1))
 
@@ -92,7 +92,7 @@ finalanswer = arrayproduct % divno
 print(finalanswer)
 # Time Taken - 0.0009942054748535156
 
-# Method 1 using lambda , map , functool library //It takes more time than math function
+# Method 2 using lambda , map , functool library //It takes more time than math function
 from functools import reduce
 divno = int(input("Enter Value of N: "))
 Arrayremainder = list(map(lambda x : x % divno ,l2))

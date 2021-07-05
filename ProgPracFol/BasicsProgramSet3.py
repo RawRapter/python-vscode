@@ -133,6 +133,7 @@ print(reverse3(L3))
 """
 7) Basic program to find sum of elements in list
 """
+#Method 1 using for loop
 def listsum(x):
     sum = 0
     for i in x:
@@ -140,11 +141,11 @@ def listsum(x):
     return sum
 print("Sum of elements of array is ",listsum(L1))
 
-#Using inbuilt sum function
+#Method 2 Using inbuilt sum function
 ans = sum(L1)
 print("Sum is ",ans)
 
-#using lambda and reduce
+#Method 3 using lambda and reduce
 print("Here the sum is ",fs.reduce(lambda x,y: x + y , L1))
 
 """
@@ -555,7 +556,7 @@ C1 = ListCopy3(L1)
 print(C1)
 #Time taken:  0.00199127197265625
 
-#Method 4, usinng append
+#Method 5, usinng append
 def ListCopy4(x):
     C1 = []
     for i in x: 
@@ -678,6 +679,7 @@ print(SOND1(OL))
 """
 27) Basic program to written first name and last name from the list in Pythonic way
 """
+#Method 1
 name = ['anant arun','aaryan madan','ganpati rai','akash biju']
 FirstName = [i.split()[0] for i in name]
 LastName = [i.split()[-1] for i in name]
