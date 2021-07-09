@@ -83,6 +83,8 @@ This Repository hasmost of the basic python programs, taken from multiple sites.
         10) Basic program to accept the strings which contains all vowels <2 ways>
         11) Basic Program to Count the Number of matching characters in a pair of string <3 Ways>
         12) Basic program to Remove all duplicates from a given string in Python <2 ways>
+        13) Basic program to Least Frequent Character in String <3 Ways>
+        14) Basic program to Most Frequent Character in String <3 Ways>
 
     6) Basics Program Set 6 <Dictionary Programs>:
         1) Basic program to Extract Unique values dictionary values <2 Ways>
@@ -94,6 +96,9 @@ This Repository hasmost of the basic python programs, taken from multiple sites.
         7) Basic Program Convert key-values list to flat dictionary <1 Way Only>
         8) Basic program for Insertion at the beginning in OrderedDict <1 Ways Only>
         9) Basic Program Dictionary and counter in Python to find winner of election <2 ways>
+        10) Basic Program to Append Dictionary Keys and Values ( In order ) in list <3 Ways>
+        11) Basic Program to Sort Python Dictionaries by Key or Value <2 Ways>
+        12) Basic Program to Sort Dictionary key and values List <2 Ways>
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs
     2) HR Site Programs

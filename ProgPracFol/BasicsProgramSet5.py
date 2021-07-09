@@ -336,3 +336,111 @@ def RemoveStringDuplicates1(x):
     return t
 print(RemoveStringDuplicates1(str))
 #Time taken:  0.0009965896606445312
+
+"""
+13) Basic program to Least Frequent Character in String
+"""
+#Method 1, using dictionary comprehension and min()
+def LessFrequentCharacter(x):
+    l =  {key:x.count(key) for key in list(x)}
+    return min(l,key=l.get)
+print(LessFrequentCharacter(b))
+#Time taken:  0.000997304916381836
+
+#Method 2, using naive method for loops
+def LessFrequentCharacter1(x):
+    l = {}
+    for i in x:
+        if i in l:
+            l[i] += 1
+        else:
+            l[i] = 1
+    return min(l,key=l.get)
+print(LessFrequentCharacter1(b))
+#Time taken:  0.0009980201721191406
+
+#Method 3, using counter
+def LessFrequentCharacter2(x):
+    l = Counter(x)
+    return min(l,key=l.get)
+print(LessFrequentCharacter2(b))
+#Time taken:  0.001001119613647461
+
+"""
+14) Basic program to Most Frequent Character in String
+"""
+#Method 1, using dictionary comprehension and min()
+def MostFrequentCharacter(x):
+    l =  {key:x.count(key) for key in list(x)}
+    return max(l,key=l.get)
+print(MostFrequentCharacter(b))
+#Time taken:  0.0010006427764892578
+
+#Method 2, using naive method for loops
+def MostFrequentCharacter1(x):
+    l = {}
+    for i in x:
+        if i in l:
+            l[i] += 1
+        else:
+            l[i] = 1
+    return max(l,key=l.get)
+print(MostFrequentCharacter1(b))
+#Time taken:  0.000997781753540039
+
+#Method 3, using counter
+def MostFrequentCharacter2(x):
+    l = Counter(x)
+    return max(l,key=l.get)
+print(MostFrequentCharacter2(b))
+#Time taken:  0.0009953975677490234
+
+"""
+15) Basic program to Program to check if a string contains any special character
+"""
+#Method 1, regular expression and compile() is used
+def StringSpecialCharCheck(x):
+    spec = re.compile("[@_!#$%^&*()<>?/\|}{~:]")
+    if spec.search(x) == None:
+        return "No Special Character string is accepted"
+    else:
+        return "String is rejected"
+print(StringSpecialCharCheck(a))
+#Time taken:  0.0010004043579101562
+
+#Method 2,Naive Method -  Using loops, if method
+def StringSpecialCharCheck1(x):
+    k = True
+    j = "[@_!#$%^&*()<>?/\|}{~:]"
+    for i in x:
+        if i in j:
+            k = False
+            break
+    if k == True:
+        return "No Special Character string is accepted"
+    else:
+        return "String is rejected"
+print(StringSpecialCharCheck1(a))
+#Time taken:  0.0010044574737548828
+
+"""
+16) Basic Program to Find words which are greater than given length k
+"""
+#Method 1, Using List comprehension , split()
+def StringLengthCheck(x):
+    k = 4 #Length limit set
+    return [i for i in x.split() if len(i) > 4]
+print(StringLengthCheck(str))
+#Time taken:  0.000990152359008789
+
+#Method 2 , Naive method
+def StringLengthCheck1(x):
+    k = input("Give the length limit: ")
+    str1 = []
+    splits = x.split()
+    for i in splits:
+        if len(i) > k:
+            str1.append(i)
+    return str1
+print(StringLengthCheck1(str))
+#Time taken:  0.001986265182495117 (putting k constant)
