@@ -6,16 +6,28 @@ import functools as ft
 from operator import itemgetter
 from collections import Counter
 from collections import OrderedDict
+import re
+
+#Dicionaries with multiple values
 a = { 'a': [5, 6, 7, 8], 'a': [6, 12, 10, 8], 'c': [10, 11, 7, 5], 'd': [1, 2, 5] }
 b = {'e': 200, 'f':400, 'g':600}
 c = {'x': 25, 'y':18, 'z':45}
+#dictionary in list
 lis = [{ "name" : "Anant", "age" : 24}, 
 { "name" : "Ananya", "age" : 19 },
 { "name" : "Unnati" , "age" : 19 }]
 a1 = {"name": ["Jan", "Feb," ,"March"], "month": [1, 2, 3]}
+#List with redundancy
 votes = ["john", "johnny", "jackie", "johnny", "john", "jackie", "jamie", "jamie", "john","johnny", "jamie", "johnny", "john"]
+#List values in dictionary
 dict1 = {'c': [3], 'b': [12, 10], 'a': [19, 4]}
+#Normal List
 arr = ['cat', 'dog', 'tac', 'god', 'act']
+#Strings
+str="anant arun nura nnaat aannt"
+str1 = "anantarunkumartiwari"
+str2 = "My name is anant arun kumar tiwari"
+
 """
 1) Basic program to Extract Unique values dictionary values
 """
@@ -300,3 +312,101 @@ def checkBinaryAnagram(n1,n2):
         return "No"
 print(checkBinaryAnagram(8,4))
 #Time taken:  0.003991127014160156
+
+"""
+18) Basic program for Counter to find the size of largest subset of anagram words
+"""
+#Method 1, spliting the string , sorted every elements and creating dictionary using counter and returning max value
+def AnagramCounter(x):
+    x1 = x.split()
+    for i in range(len(x1)):
+        x1[i] = ''.join(sorted(x1[i]))
+    d1 = Counter(x1)
+    return max(d1.values())
+print(AnagramCounter(str))
+#Time taken:  0.0009908676147460938
+
+#Method 2, all same procedure just using dictionary comprehension instead of counter
+def AnagramCounter1(x):
+    x1 = x.split()
+    for i in range(len(x1)):
+        x1[i] = ''.join(sorted(x1[i]))
+    d1 = {keys:x1.count(keys) for keys in x1}
+    return max(d1.values())
+print(AnagramCounter1(str))
+#Time taken:  0.0009970664978027344
+
+"""
+19) Basic Program to Remove all duplicates words from a given sentence
+"""
+#Method 1, creating set from string and printing it
+def RemoveDuplicates(x):
+    x1 = x.split(' ')
+    s1 = set(x1)
+    for i in s1:
+        print(i, end=' ')
+    return "<- Unique Elements"
+print(RemoveDuplicates(str))
+#Time taken:  0.0009970664978027344
+
+#Method 2, making dictionary from string and printing keys
+def RemoveDuplicates1(x):
+    x = x.split()
+    d1 = Counter(x)
+    s = ' '.join(d1.keys())
+    return s
+print(RemoveDuplicates1(str))
+#Time taken:  0.0009975433349609375
+
+#Method 3, Naive Method
+def RemoveDuplicates2(x):
+    x1 = x.split()
+    x2 = []
+    for i in x1:
+        if x.count(i) >=1 and (i not in x2):
+            x2.append(i)
+    return ' '.join(x2)
+print(RemoveDuplicates2(str))
+#Time taken:  0.0009984970092773438
+
+"""
+20) Basic program to find mirror characters in a string
+"""
+ #Given a string and a number N, we need to mirror the characters from the N-th position up to the length of the string in 
+ #alphabetical order. In mirror operation, we change ‘a’ to ‘z’, ‘b’ to ‘y’, and so on.
+ 
+ #Method 1, using slicing , loop and dictionary zip
+def MirrorWord(x,k):
+    original = 'abcdefghijklmnopqrstuvwxyz'
+    reverse = 'zyxwvutsrqponmlkjihgfedcba'
+    zipping = dict(zip(original,reverse))
+    prefix= x[0:k-1]
+    suffix = x[k-1:]
+    mirror = ''
+    for i in range(0,len(suffix)):
+        mirror += zipping[suffix[i]]
+    return prefix+mirror
+print(MirrorWord(str1,4))
+#Time taken:  0.003994941711425781
+
+"""
+21) Basic program to Replace multiple words with K
+"""
+#Method 1, using list comprehnsion , join
+def ReplaceMultipleWords(x):
+    wordlist = ["name","kumar","tiwari"]
+    replaceword = "anant"
+    result = [replaceword if i in wordlist else i for i in x.split()]
+    result1 = ' '.join(result)
+    return result1
+print(ReplaceMultipleWords(str2))
+#Time taken:  0.0009970664978027344
+
+#Method 2, using regex
+def ReplaceMultipleWords1(x):
+    wordlist = ["name","kumar","tiwari"]
+    replaceword = "anant"
+    result = re.sub("|".join(wordlist),replaceword,x)
+    return result
+print(ReplaceMultipleWords1(str2))
+#Time taken:  0.0010001659393310547

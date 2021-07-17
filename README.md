@@ -1,7 +1,8 @@
 # python-vscode
-This Repository hasmost of the basic python programs, taken from multiple sites.
+This Repository has most of the basic python programs, taken from multiple sites.
 
-**Important Note** : Every program have emultiple methods , they include my original logics and also from different sites like Geeks for Geeks
+**Important Note** : Every program have multiple methods , they include my original logic and also from different programming sites.
+
 ## 1) Program Practice Folder :
 
     1) Basic Program Set 1:
@@ -85,6 +86,13 @@ This Repository hasmost of the basic python programs, taken from multiple sites.
         12) Basic program to Remove all duplicates from a given string in Python <2 ways>
         13) Basic program to Least Frequent Character in String <3 Ways>
         14) Basic program to Most Frequent Character in String <3 Ways>
+        15) Basic program to Program to check if a string contains any special character <2 Ways>
+        16) Basic Program to Find words which are greater than given length k <2 Ways>
+        17) Basic program for removing i-th character from a string <3 Ways>
+        18) Basic program to split and join a string to get '-' instad of space <3 Ways>
+        19) Basic Program to Check if a given string is binary string or not <2 Ways>
+        20) Basic program to find uncommon words from two Strings <2 Ways>
+        21) Basic Program to Replace duplicate Occurrence in String <2 Ways>
 
     6) Basics Program Set 6 <Dictionary Programs>:
         1) Basic program to Extract Unique values dictionary values <2 Ways>
@@ -99,7 +107,47 @@ This Repository hasmost of the basic python programs, taken from multiple sites.
         10) Basic Program to Append Dictionary Keys and Values ( In order ) in list <3 Ways>
         11) Basic Program to Sort Python Dictionaries by Key or Value <2 Ways>
         12) Basic Program to Sort Dictionary key and values List <2 Ways>
+        13) Basic Program to Handling missing keys in Python dictionaries <1 Way Only>
+        14) Basic program dictionary with keys having multiple inputs <1 Way Only>
+        15) Basic Program to Print anagrams together in Python using List and Dictionary <1 Way Not Working Currently>
+        16) Basic Program K’th Non-repeating Character in Python using List Comprehension and OrderedDict <2 Ways>
+        17) Basic program to Check if binary representations of two numbers are anagram <1 Way Only>
+        18) Basic program for Counter to find the size of largest subset of anagram words <2 Ways>
+        19) Basic Program to Remove all duplicates words from a given sentence <3 Ways>
+        20) Basic program to find mirror characters in a string <1 Way Only>
+        21) Basic program to Replace multiple words with K <2 Ways>
 ## 2) Program Sites Folder :
-    1) Guvi Site: https://www.guvi.in/ programs
-    2) HR Site Programs
-    3) Udemy Programs
+    1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
+    2) HR Site Programs <1 Question>
+    3) Udemy Programs <1 Question>
+
+
+## Purpose Of This Repository
+To show there are multiple ways to a same Requirements with different run time so that one can understand the difference between various logic.
+
+## Tech Stack
+
+**Software:** VS Code , Python 3
+
+**Questions from Sites(Logics too):**
+- Geeks For Geeks
+- Guvi
+- Udemy
+- Hacker Rank
+
+## Feedback
+
+If you have any feedback, please mail me at anant.arun92@gmail.com
+
+## FAQ
+#### 1) All programs logic are done by me?
+No, only few of them. Others have been taken from different sites with best runtime
+
+#### 2) Time Taken by the program are in which unit?
+They are in seconds.
+
+#### 3) How to Contact me?
+Check Feedback Panel.
+
+#### 4) Can you use codes?
+Yeah, you surely can for practice but cannot show it your own , you have to mention my name and other sites as per license.

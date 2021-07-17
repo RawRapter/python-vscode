@@ -3,6 +3,7 @@ This set is related to string python programs, question taken from GeeksOfGeeks
 """
 #All Import
 from itertools import count
+from operator import index
 import re
 from collections import Counter
 #Strings Created:
@@ -10,9 +11,10 @@ a = 'anna'
 b = 'anant'
 c = 'bumbum'
 str = "My Name is Anant Arun"
-stra = "My My Name Name Name is is is is Anant Anant Arun"
+stra = "Anant arun is doing masters"
 strb = "My_Name_is_Anant_Arun"
-
+strc = "0011101001"
+strd = "Anant is doing btech anant has joined PEC pec is a good college"
 """
 1) Program to check if a string is palindrome or not
 """
@@ -444,3 +446,147 @@ def StringLengthCheck1(x):
     return str1
 print(StringLengthCheck1(str))
 #Time taken:  0.001986265182495117 (putting k constant)
+
+
+"""
+17) Basic program for removing i-th character from a string
+"""
+#Method 1, using list funtions, x is string and k is index to be deleted
+def removeCharInStr(x,k):
+    z = ''
+    splt = list(x)
+    splt.pop(k-1)
+    for i in splt:
+        z += i
+    return z
+print(removeCharInStr(b,2))
+#Time taken:  0.0009942054748535156
+
+#Method 2, using string slicing
+def removeCharInStr1(x,k):
+    a = x[:k]
+    b = x[k+1:]
+    return a + b
+print(removeCharInStr1(b,2))
+#Time taken:  0.0009970664978027344
+
+#Method 3, using string replace [It is not working properly]
+def removeCharInStr2(x,k):
+    for i in range(len(x)):
+        if i == k-1:
+            x = x.replace(x[i],"",1)
+    return x
+print(removeCharInStr2(b,3))
+#Time taken:  0.0009968280792236328
+
+"""
+18) Basic program to split and join a string to get '-' instad of space
+"""
+#Method 1
+def StringSplitJoin2(x):
+    listx = x.split(' ')
+    print("After Split-> ",listx)
+    strx = '-'.join(listx)
+    print("After Join: ",end=" ")
+    return strx
+print(StringSplitJoin2(str))
+#Time taken:  0.002007722854614258
+
+#Method 2, instead of splitting and joing directly using string replace
+def StringSplitJoin(x):
+    x = x.replace(" ","-")
+    return x
+print(StringSplitJoin(str))
+#Time taken:  0.0039975643157958984
+
+#Method 3, using regex
+def StringSplitJoin1(x):
+    x = re.sub("\s","-",x)
+    return x
+print(StringSplitJoin1(str))
+#Time taken:  0.003983259201049805
+
+"""
+19) Basic Program to Check if a given string is binary string or not
+"""
+#Method 1 , splitting string and converting to set
+def BinaryStringCheck(x):
+    x = set(list(x))
+    if ('0' in x) and ('1' in x) and (len(x) == 2):
+        return "Yes it is binary"
+    else:
+        return "It is not binary"
+print(BinaryStringCheck(strc))
+#Time taken:  0.0009982585906982422
+
+#Method 2, iterating through characters
+def BinaryStringCheck1(x):
+    t = "01"
+    count = 0
+    for i in x:
+        if i not in t:
+            count = 1
+            break
+        else:
+            pass
+    if count == 1:
+        return "Yes it is binary"
+    else:
+        return "It is not binary"
+print(BinaryStringCheck1(strc))
+#Time taken:  0.0009984970092773438
+
+"""
+20) Basic program to find uncommon words from two Strings
+"""
+#Method 1, using loops and list
+def UncommonWords(x,y):
+    xlist = x.split()
+    ylist = y.split()
+    z = []
+    for i in xlist:
+        if i not in ylist:
+            z.append(i)
+    for i in ylist:
+        if i not in xlist:
+            z.append(i)
+    return z
+print(UncommonWords(str,stra))
+#Time taken:  0.0009970664978027344
+
+#Method 2, using symmetric difference
+def UncommonWords1(x,y):
+    xlist = x.split()
+    ylist = y.split()
+    k=set(xlist).symmetric_difference(set(ylist))
+    return k
+print(UncommonWords1(str,stra))
+#Time taken:  0.0009989738464355469
+
+"""
+21) Basic Program to Replace duplicate Occurrence in String
+"""
+#Method 1, using enumerate,split,join
+def ReplaceDuplicate(x):
+    split1 = x.split()
+    replace_dict = {'anant':'he','PEC':'it'}
+    newr = set()
+    for idx,ele in enumerate(split1):
+        if ele in newr:
+            split1[idx] = replace_dict[ele]
+        else:
+            newr.add(ele)
+    newr = ' '.join(split1)
+    return newr
+print(ReplaceDuplicate(strd))
+#Time taken:  0.003998756408691406
+
+#Method 2, using list comprehension , index() , dictionary
+def ReplaceDuplicate1(x):
+    split1 = x.split()
+    replace_dict = {'anant':'he','PEC':'it'}
+    result = ' '.join([replace_dict.get(val) if val in replace_dict.keys() and split1.index(val) != idx
+    else val for idx,val in enumerate(split1)])
+    return result
+print(ReplaceDuplicate1(strd))
+#Time taken:  0.0009970664978027344
