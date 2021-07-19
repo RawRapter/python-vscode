@@ -4,9 +4,10 @@ This set is related to dictionary python programs, question taken from GeeksOfGe
 import itertools as it
 import functools as ft
 from operator import itemgetter
-from collections import Counter
+from collections import Counter, defaultdict
 from collections import OrderedDict
 import re
+from typing import Dict
 
 #Dicionaries with multiple values
 a = { 'a': [5, 6, 7, 8], 'a': [6, 12, 10, 8], 'c': [10, 11, 7, 5], 'd': [1, 2, 5] }
@@ -19,14 +20,21 @@ lis = [{ "name" : "Anant", "age" : 24},
 a1 = {"name": ["Jan", "Feb," ,"March"], "month": [1, 2, 3]}
 #List with redundancy
 votes = ["john", "johnny", "jackie", "johnny", "john", "jackie", "jamie", "jamie", "john","johnny", "jamie", "johnny", "john"]
+dict = [1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2]
 #List values in dictionary
 dict1 = {'c': [3], 'b': [12, 10], 'a': [19, 4]}
+ddict = {"abc" : [10, 30], "bcd" : [30, 40, 10]}
 #Normal List
 arr = ['cat', 'dog', 'tac', 'god', 'act']
 #Strings
 str="anant arun nura nnaat aannt"
 str1 = "anantarunkumartiwari"
 str2 = "My name is anant arun kumar tiwari"
+str3 = "anantarun"
+str4 = "heanroanactadaremun"
+str5 = "abbcc"
+#List of Tuple
+LOT = [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 
 """
 1) Basic program to Extract Unique values dictionary values
@@ -410,3 +418,94 @@ def ReplaceMultipleWords1(x):
     return result
 print(ReplaceMultipleWords1(str2))
 #Time taken:  0.0010001659393310547
+
+"""
+22) Basic program to Counting the frequencies in a list using dictionary in Python
+"""
+#Method 1, using dictionary comprehension
+def ListFrequency(x):
+    result = {keys:x.count(keys) for keys in x}
+    return result
+print(ListFrequency(dict))
+#Time taken:  0.003993034362792969
+
+#Method 2, using counter
+def ListFrequency1(x):
+    result = Counter(x)
+    return result
+print(ListFrequency1(dict))
+#Time taken:  0.003998994827270508
+
+#Method 3, using loops
+def ListFrequency2(x):
+    freq = {}
+    for i in x:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    return freq
+print(ListFrequency2(dict))
+#Time taken:  0.003989696502685547
+
+#Method 4, loop and count
+def ListFrequency3(x):
+    freq = {}
+    for i in x:
+        freq[i] = x.count(i)
+    return freq
+print(ListFrequency3(dict))
+#Time taken:  0.003989458084106445
+
+"""
+23) Basic program to Convert a list of Tuples into Dictionary
+"""
+#Method 1
+def LOTDict(x):
+    dic = {}
+    for a,b in x:
+        dic[a] = b
+    return dic
+print(LOTDict(LOT))
+#Time taken:  0.0009987354278564453
+
+"""
+24) Basic Progam based on counter and dictionary intersection example (Make a string using deletion and rearrangement)
+"""
+#Given two strings, find if we can make first string from second by deleting,
+#some characters from second and rearranging remaining characters.
+def StringCheck(x,y):
+    x1 = Counter(x)
+    y1 = Counter(y)
+    result =  x1 & y1
+    return x1 == result
+print(StringCheck(str3,str4))
+#Time taken:  0.000997304916381836
+
+"""
+25) Basic Program using dictionary, set and counter to check if frequencies can become same
+"""
+def CounterFreq(x):
+    dict1 = Counter(x)
+    setlist = list(set(dict1.values()))
+    if len(setlist) > 2:
+        return "No, frequency cannot become same"
+    elif len(setlist) == 2 and setlist[1] - setlist[0] > 1:
+        return "No, frequency cannot become same"
+    else:
+        return "Yes, frequency can be same"
+print(CounterFreq(str5))
+#Time taken:  0.003973722457885742
+
+"""
+26) Basic Program for Keys associated with Values in Dictionary
+"""
+#From GOG
+def Valtokey(x):
+    result = defaultdict(list)
+    for key,val in x.items():
+        for ele in val:
+            result[ele].append(key)
+    return result
+print(Valtokey(ddict))
+#Time taken:  0.003995656967163086

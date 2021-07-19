@@ -93,6 +93,13 @@ This Repository has most of the basic python programs, taken from multiple sites
         19) Basic Program to Check if a given string is binary string or not <2 Ways>
         20) Basic program to find uncommon words from two Strings <2 Ways>
         21) Basic Program to Replace duplicate Occurrence in String <2 Ways>
+        22) Basic program to Permutation of a given string using inbuilt function <2 Ways>
+        23) Basic program to Check for URL in a String <1 Way Only>
+        24) Basic Program to Execute a String of Code in Python <1 Way Only>
+        25) Basic Program to String slicing in Python to rotate a string <1 Way Only>
+        26) Basic Program to String slicing in Python to check if a string can become empty by recursive deletion <1 Way Only>
+        27) Basic Program to Find all duplicate characters in string <1 Way Only>
+        28) Basic Program to  Replace all occurrences of a substring in a string <1 Way Only>
 
     6) Basics Program Set 6 <Dictionary Programs>:
         1) Basic program to Extract Unique values dictionary values <2 Ways>
@@ -116,6 +123,11 @@ This Repository has most of the basic python programs, taken from multiple sites
         19) Basic Program to Remove all duplicates words from a given sentence <3 Ways>
         20) Basic program to find mirror characters in a string <1 Way Only>
         21) Basic program to Replace multiple words with K <2 Ways>
+        22) Basic program to Counting the frequencies in a list using dictionary in Python <4 Ways>
+        23) Basic program to Convert a list of Tuples into Dictionary <1 Way Only>
+        24) Basic Progam based on counter and dictionary intersection example (Make a string using deletion and rearrangement) <1 Way Only>
+        25) Basic Program using dictionary, set and counter to check if frequencies can become same <1 Way Only>
+        26) Basic Program for Keys associated with Values in Dictionary <1 Way Only>
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
     2) HR Site Programs <1 Question>

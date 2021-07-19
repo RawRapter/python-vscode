@@ -2,9 +2,9 @@
 This set is related to string python programs, question taken from GeeksOfGeeks
 """
 #All Import
-from itertools import count
+from itertools import count, permutations
 from operator import index
-import re
+import re, string
 from collections import Counter
 #Strings Created:
 a = 'anna'
@@ -15,6 +15,7 @@ stra = "Anant arun is doing masters"
 strb = "My_Name_is_Anant_Arun"
 strc = "0011101001"
 strd = "Anant is doing btech anant has joined PEC pec is a good college"
+stre = "anantarunanantamanante"
 """
 1) Program to check if a string is palindrome or not
 """
@@ -566,6 +567,7 @@ print(UncommonWords1(str,stra))
 """
 21) Basic Program to Replace duplicate Occurrence in String
 """
+#Both programs are from geeks of geeks
 #Method 1, using enumerate,split,join
 def ReplaceDuplicate(x):
     split1 = x.split()
@@ -590,3 +592,111 @@ def ReplaceDuplicate1(x):
     return result
 print(ReplaceDuplicate1(strd))
 #Time taken:  0.0009970664978027344
+
+"""
+22) Basic program to Permutation of a given string using inbuilt function
+"""
+#Both programs are from geeks of geeks
+#Method 1, using permutations , characters not repeating
+def StringPermutation(x):
+    permx = permutations(x)
+    for i in permx:
+        print(' '.join(i))
+    return "All permutations done"
+print(StringPermutation('abc'))
+
+#Method 2, when characterrs are repeatable
+def StringPermutation1(x):
+    p = permutations(x)
+    x = []
+    for i in list(p):
+        if i not in x:
+            x.append(i)
+            print(' '.join(i))
+print(StringPermutation1('anant'))
+#Time taken:  0.0039997100830078125
+
+"""
+23) Basic program to Check for URL in a String
+"""
+#From GOG
+#Method 1, using regex, code from geek of geeks
+def FindURL(x):
+    regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+    url = re.findall(regex,x)
+    return [i[0] for i in url]
+GivenString = "My profile is: https://www.linkedin.com/in/anantarun/"
+print("URL is: ",FindURL(GivenString))
+#Time taken:  0.004002094268798828
+
+"""
+24) Basic Program to Execute a String of Code in Python
+"""
+#From GOG
+#Method 1
+def execString():
+    code = """
+a = 6 + 5
+print(a)
+"""
+    exec(code)
+print(execString())
+#Time taken:  0.003987550735473633
+
+"""
+25) Basic Program to String slicing in Python to rotate a string
+"""
+#Method 1, string slicing
+def rotateString(x,k):#change number to change character shifts
+    Leftpart1 = x[:k]
+    Leftpart2 = x[k:]
+    Rightpart1 = x[:len(x)-k]
+    Rightpart2 = x[len(x)-k:]
+    return "Left Rotation: "+(Leftpart2+Leftpart1)+" and Right Rotation: "+(Rightpart2+Rightpart1)
+k = 2
+print(rotateString(strb,k))
+#Time taken:  0.003995180130004883
+
+"""
+26) Basic Program to String slicing in Python to check if a string can become empty by recursive deletion
+"""
+#From GOG
+#Method 1
+def CheckStringPatternDel(x,pattern):
+    if len(x) == 0 and len(pattern) == 0:
+        return True
+    if len(pattern) == 0:
+        return True
+    while(len(x)!=0):
+        index = x.find(pattern)
+        if(index == -1):
+            return False
+        x = x[:index] + x[index+len(pattern):]
+    return True
+print(CheckStringPatternDel('ananantant','anant'))
+#Time taken:  0.0009980201721191406
+
+"""
+27) Basic Program to Find all duplicate characters in string
+"""
+#Method 1, using dictionary comprehension
+def AllDuplicateInStrings(x):
+    d = {keys:x.count(keys) for keys in list(x)}
+    for keys,values in d.items():
+        if values > 1:
+            print(keys, end=" ")
+    return "<- Here are all the duplicates"
+print(AllDuplicateInStrings('anantaruntiwari'))
+#Time taken:  0.000997304916381836
+
+"""
+28) Basic Program to  Replace all occurrences of a substring in a string
+"""
+#Method 1, using regex
+def ReplaceSubstring(x,y,z): #x is string, y is to replace, z is replaced by
+    result = re.sub(y,z,x)
+    return result
+ToReplace = "an"
+ByReplace = "Hero"
+print(ReplaceSubstring(stre,ToReplace,ByReplace))
+#Time taken:  0.0009999275207519531
