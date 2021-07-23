@@ -1,5 +1,14 @@
-# python-vscode
-This Repository has most of the basic python programs, taken from multiple sites.
+# Python Program Package
+This Repository contains basic python programs, taken from multiple sites.
+<hr>
+
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/RawRapter/python-vscode">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RawRapter/python-vscode">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/RawRapter/python-vscode">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/RawRapter/python-vscode">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/RawRapter/python-vscode">
+
+<hr>
 
 **Important Note** : Every program have multiple methods , they include my original logic and also from different programming sites.
 
@@ -24,6 +33,7 @@ This Repository has most of the basic python programs, taken from multiple sites
         16) Basic Program to write ASCII value of a Character <1 Way Only>
         17) Basic Program to find Sum of squares of first n natural numbers <1 Way Only>
         18) Basic Program to find Sum of cube of first n natural numbers using Lambda <1 Way Only>
+        
     2) Basic Program Set 2 <Array Programs>:
         1) Python Program to find sum of array in multiple ways <3 Ways>
         2) Basic Program to find largest element in an array <1 Way Only>
@@ -31,6 +41,7 @@ This Repository has most of the basic python programs, taken from multiple sites
         4) Basic Program to Split the array and add the first part to the end <1 Way Only>
         5) Program for Find reminder of array multiplication divided by n <2 Ways>
         6) Basic Program to check if given array is Monotonic. An array A is monotone increasing if for all i <= j, A[i] <= A[j]. An array A is monotone decreasing if for all i <= j, A[i] >= A[j]. <2 Ways>
+
     3) Basics Program Set 3 <List Programs>:
         1) Basic program to interchange first and last elements in a list <2 Ways>
         2) Basic program to swap two elements in a list(input list and 2 places to be swapped, taking first elements as position one(not index)) <1 Way only>
@@ -61,6 +72,7 @@ This Repository has most of the basic python programs, taken from multiple sites
         27) Basic program to written first name and last name from the list in Pythonic way <1 Ways Only>
         28) Basic Program to Break a list into chunks of size N in Python <2 Ways>
         29) Basic program to Sort the values of first list using second list in Python <1 Ways Only>
+        
     4) Basics Program Set 4 <Matrix Programs>:
         1) Basic program to add two Matrices <3 Ways>
         2) Basic program to multiply two matrices <3 Ways>
@@ -128,6 +140,24 @@ This Repository has most of the basic python programs, taken from multiple sites
         24) Basic Progam based on counter and dictionary intersection example (Make a string using deletion and rearrangement) <1 Way Only>
         25) Basic Program using dictionary, set and counter to check if frequencies can become same <1 Way Only>
         26) Basic Program for Keys associated with Values in Dictionary <1 Way Only>
+    
+    7) Basics Program Set 7 <Tuple Programs>:
+        1) Program to Find the size of a Tuple <2 Ways>
+        2) Program to find Maximum and Minimum K elements in Tuple <2 Ways>
+        3) Program to Create a list of tuples from given list having number and its cube in each tuple <2 Ways>
+        4) Programm to Adding Tuple to List and vice – versa <3 Ways>
+        5) Program to Join Tuples if similar initial element <1 Way Only>
+        6) Program to Extract digits from Tuple list <1 Way Only>
+        7) Program to get All pair combinations of 2 tuples <2 Ways>
+        8) Program to Remove Tuples of Length K <2 Ways>
+        9) Program to Sort a list of tuples by second Item <3 Ways>
+        10) Program to Order Tuples using external List <3 Ways>
+        11) Program to Flatten tuple of List to tuple <1 Way Only>
+        12) Program to Convert Nested Tuple to Custom Key Dictionary <1 Way Only>
+
+    8) Basics Program Set 8 <Searching and Sorting>
+        1) Binary Search <2 Ways>
+
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
     2) HR Site Programs <1 Question>
