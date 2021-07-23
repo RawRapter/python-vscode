@@ -2,8 +2,7 @@
 This Repository contains basic python programs, taken from multiple sites.
 <hr>
 
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/RawRapter/python-vscode">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RawRapter/python-vscode">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/RawRapter/python-vscode"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RawRapter/python-vscode">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/RawRapter/python-vscode">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/RawRapter/python-vscode">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/RawRapter/python-vscode">
