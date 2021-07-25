@@ -34,3 +34,51 @@ if __name__ == '__main__':
             finallisr.append(i[0])
     for i in sorted(finallisr):
         print(i)
+
+"""
+Question 2: Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+"""
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    result = 0
+    count = 0
+    for i in student_marks[query_name]:
+        result += i
+        count += 1
+    result1 = result/count
+    print('%.2f'%result1)
+
+"""
+Question 3: Basic List program having multiple commands
+"""
+if __name__ == '__main__':
+    N = int(input())
+    #All the commands in dictionary
+    commands = {
+        "insert": lambda a,b,c: a.insert(b,c),
+        "print": lambda a : print(a),
+        "remove": lambda a,b:a.remove(b),
+        "append": lambda a,b:a.append(b),
+        "sort": lambda a:a.sort(),
+        "pop": lambda a:a.pop(),
+        "reverse": lambda a:a.reverse()
+    }
+    output=[] #empty list
+    for i in range(N):
+        a = input() #Commands input
+        splita = a.split(" ") #spliting commands
+        #compand text part
+        command = splita[0]
+        try:#commands with 3 input
+            commands[command](output,int(splita[1]),int(splita[2]))
+        except IndexError:
+            try:#commands with 2 inputs
+                commands[command](output,int(splita[1]))
+            except IndexError: #commands with 1 input
+                commands[command](output)

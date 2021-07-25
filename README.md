@@ -1,5 +1,6 @@
 # Python Program Package
 This Repository contains basic python programs, taken from multiple sites.
+
 <hr>
 
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/RawRapter/python-vscode"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RawRapter/python-vscode">
@@ -156,10 +157,13 @@ This Repository contains basic python programs, taken from multiple sites.
 
     8) Basics Program Set 8 <Searching and Sorting>
         1) Binary Search <2 Ways>
+        2) Linear Search <2 Ways>
+        3) Insertion Sort
+        4) Quick Sort
 
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
-    2) HR Site Programs <1 Question>
+    2) HR Site Programs <3 Question>
     3) Udemy Programs <1 Question>
 
 
