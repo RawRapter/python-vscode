@@ -160,6 +160,19 @@ This Repository contains basic python programs, taken from multiple sites.
         2) Linear Search <2 Ways>
         3) Insertion Sort
         4) Quick Sort
+    
+    9) Basic Program Set 9 <Pattern>
+        1) G pattern
+        2) Inverted Star pattern
+        3) Double sided stair case patten
+    
+    10) Basic Program Set 10 <Date-Time>
+        1) Program to get Current Time <3 Ways>
+        2) Get Current Date and Time using Python <1 Way>
+        3) Program to Find yesterday’s, today’s and tomorrow’s date <1 Way>
+        4) Program to convert time from 12 hour to 24 hour format <1 Way>
+        5) Program to find difference between current time and given time <1 Way>
+        6) How to convert timestamp string to datetime object <1 Way>
 
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>

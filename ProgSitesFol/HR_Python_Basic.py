@@ -1,4 +1,5 @@
 #Note: Please run seperately dont run this file
+import textwrap
 """
 Question 1: Given the names and grades for each student in a class of N students, store them in a nested list
 and print the name(s) of any student(s) having the second lowest grade.
@@ -82,3 +83,75 @@ if __name__ == '__main__':
                 commands[command](output,int(splita[1]))
             except IndexError: #commands with 1 input
                 commands[command](output)
+
+"""
+Question 4: Your task is to find out if the string contains: alphanumeric characters, alphabetical characters, digits,
+lowercase and uppercase characters.
+"""
+if __name__ == '__main__':
+    s = input()
+    print(any(c.isalnum() for c in s))
+    print(any(c.isalpha() for c in s))
+    print(any(c.isdigit() for c in s))
+    print(any(c.islower() for c in s))
+    print(any(c.isupper() for c in s))
+
+"""
+Question 5: task is to wrap the string into a paragraph of given width.
+"""
+def wrap(string, max_width):
+    wrapper = textwrap.TextWrapper(width=max_width)
+    word_list = wrapper.wrap(text=string)
+    return "\n".join(word_list)
+
+"""
+Question 6: Floor mat design
+"""
+n,m = map(int,input().split())
+#Abovepart
+for i in range(1,((n-1)//2)+1):
+    print(((2*i-1)*".|.").center(m,'-'))
+#Middlepart
+print("WELCOME".center(m,'-'))
+#belowpart
+for i in range(((n-1)//2),0,-1):
+    print(((2*i-1)*".|.").center(m,'-'))
+
+"""
+Question 6: String formatting
+"""
+def print_formatted(number):
+    w = len(bin(number)[2:])
+    for i in range(1,number+1):
+        d = str(i)
+        o = oct(i)[2:]
+        h = hex(i)[2:].upper()
+        b = bin(i)[2:]
+        print(d.rjust(w),o.rjust(w),h.rjust(w),b.rjust(w))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+
+"""
+Question 7: Alphabet Rangoli
+"""
+def print_rangoli(size):
+    # All characters
+    characters="abcdefghijklmnopqrstuvwxyz"
+    #creating list of characters
+    data = [characters[i] for i in range(n)]
+    #creating index
+    item = list(range(n))
+    #getting desired patter like 32123
+    item = item[:-1]+item[::-1]
+    for i in item:
+        #getting alphabets
+        temp = data[-(i+1):]
+        #getting desired pattern alphabet
+        row = temp[::-1]+temp[1:]
+        print("-".join(row).center(n*4-3,"-"))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
