@@ -155,3 +155,124 @@ def print_rangoli(size):
 if __name__ == '__main__':
     n = int(input())
     print_rangoli(n)
+
+
+"""
+Question 8: Counter in collections, number of shoes , all size of shoes given sum the amount.
+"""
+from collections import Counter
+int(input())
+sizes = list(map(int,input().split()))
+money = 0
+stocks = Counter(sizes)
+for i in range(int(input())):
+    o,p = list(map(int,input().split()))
+    if stocks[o]:
+        money += p
+        stocks[o] -= 1
+print(money)
+
+
+"""
+Question 9: DefaultDictionary in collections , two group check index of B group element in A, if doesnt exist then return -1
+"""
+from collections import defaultdict
+b1,b2 = list(map(int,input().split()))
+d = defaultdict(list)
+for i in range(b1):
+    d[input()].append(i+1)
+for i in range(b2):
+    print(*d[input()] or [-1])
+
+"""
+Question 10: NamedTuple in collections, ID marks clas names of student stored get the average marks
+"""
+from collections import namedtuple
+n = int(input())
+Score = namedtuple("Score",input().split())
+scores = [Score(*input().split()).MARKS for i in range(n)]
+print(round((sum(map(int,scores))/n),2))
+
+"""
+Question 11: Ordered Dictionary in Collections, supermarket sales
+"""
+from collections import OrderedDict
+n = int(input())
+ordered_dictionary = OrderedDict({})
+for i in range(n):
+    x = input().split(' ')
+    y = int(x[-1])
+    x.pop()
+    x1 = ' '.join(x)
+    if x1 in ordered_dictionary:
+        ordered_dictionary[x1] += y
+    else:
+        ordered_dictionary[x1] = y
+for i,j in ordered_dictionary.items():
+    print(i,j)
+
+"""
+Question 12: Set operations
+"""
+n = int(input())
+s = set(map(int, input().split()))
+noc = int(input())
+commands = {
+    "pop" : lambda a:a.pop(),
+    "remove" : lambda a,b:a.remove(b),
+    "discard" : lambda a,b : a.discard(b)
+}
+for i in range(noc):
+    z = input()
+    z1 = z.split()
+    command = z1[0]
+    try:
+        commands[command](s,int(z1[1]))
+    except IndexError:
+        commands[command](s)
+print(sum(s))
+
+"""
+13) Polar coordinates of complex number using cmath
+"""
+import cmath
+z = complex(input())
+for i in cmath.polar(z):
+    print(i)
+
+"""
+14) Weekday in caps of specific date
+"""
+import datetime as dt
+import calendar
+n = input()
+weekday = dt.datetime.strptime(n,"%m %d %Y").weekday()
+print((calendar.day_name[weekday]).upper())
+
+"""
+15) Exception Program
+"""
+n = int(input())
+for i in range(n):
+    n1,n2 = input().split()
+    try:
+        print(int(n1)//int(n2))
+    except ZeroDivisionError as e:
+        print("Error Code:",e)
+    except ValueError as v:
+        print("Error Code:",v)
+
+"""
+16) Set Symmetric Difference
+"""
+x = input()
+y = map(int,input().split())
+x1 = input()
+y1 = map(int,input().split())
+z = set(y)
+z1 = set(y1)
+z2 = z.symmetric_difference(z1)
+z2 = list(z2)
+z2.sort()
+for i in z2:
+    print(i)

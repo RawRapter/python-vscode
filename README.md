@@ -173,10 +173,24 @@ This Repository contains basic python programs, taken from multiple sites.
         4) Program to convert time from 12 hour to 24 hour format <1 Way>
         5) Program to find difference between current time and given time <1 Way>
         6) How to convert timestamp string to datetime object <1 Way>
+    
+    11) Basic Program Set 10 <Regex>
+        1) Program to Check if String Contain Only Defined Characters using Regex <1 Way Only>
+        2) Program to Count Uppercase, Lowercase, special character and numeric values using Regex <2 Ways>
+        3) Program to find the most occurring number in a string using Regex <1 Way Only>
+        4) Program to extract maximum numeric value from a string <2 Ways>
+        5) Program to put spaces between words starting with capital letters using Regex <1 Way Only>
+        6) Program to Check whether a string starts and ends with the same character or not <1 Way Only>
+        7) Program in regex to find sequences of one upper case letter followed by lower case letters <1 Way Only>
+        8) Program to Remove duplicate words from Sentence <1 Way Only>
+        9) Program to Remove all characters except letters and numbers <3 Ways>
+        10) Program to accept string ending with alphanumeric character <1 Way Only>
+        11) Program to accept string starting with vowel <1 Way Only>
+        12) Program to check if a string starts with a substring using regex <2 Ways>        
 
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
-    2) HR Site Programs <3 Question>
+    2) HR Site Programs <16 Question>
     3) Udemy Programs <1 Question>
 
 
@@ -209,3 +223,8 @@ Check Feedback Panel.
 
 #### 4) Can you use codes?
 Yeah, you surely can for practice but cannot show it your own , you have to mention my name and other sites as per license.
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://rawrapter.github.io/portfolio/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anantarun/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/AnantArun4)
