@@ -276,3 +276,15 @@ z2 = list(z2)
 z2.sort()
 for i in z2:
     print(i)
+
+"""
+17) itertools combination
+"""
+from itertools import combinations
+x,y = input().split()
+x = list(x)
+x.sort()
+for i in range(1,int(y)+1):
+    z = list(combinations(x,i))
+    for j in z:
+        print(''.join(j))

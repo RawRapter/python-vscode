@@ -15,6 +15,10 @@ g = "a#f$b@gjdg*dg&"
 h = "anant123"
 i = "anant@"
 j = "anantarunheroacademia"
+url = "https://rawrapter.github.io/portfolio/"
+email = "anant.arun92@gmail.com"
+filenames = ["anant.html", "anant.xml", "anant.txt", "anant.jpg"]
+password = "Anant_Zura007"
 
 """
 1) Program to Check if String Contain Only Defined Characters using Regex
@@ -289,3 +293,142 @@ def string_starts_substring1(x: str,y: str)->str:
     return "Valid" if z else "Invalid"
 print(string_starts_substring1(j,e))
 #Time taken:  0.0009975433349609375
+
+"""
+13) Program to Check if an URL is valid or not using Regular Expression
+"""
+#From GOG
+def isValidURL(str: str):
+    """
+    Input: String
+    Output: Boolean
+    Checks if the URL are valid or not
+    """
+    regex = ("((http|https)://)(www.)?" +
+             "[a-zA-Z0-9@:%._\\+~#?&//=]" +
+             "{2,256}\\.[a-z]" +
+             "{2,6}\\b([-a-zA-Z0-9@:%" +
+             "._\\+~#?&//=]*)")
+    p = re.compile(regex)
+    if (str == None):
+        return False
+    if(re.search(p, str)):
+        return True
+    else:
+        return False
+print(isValidURL(url))
+#Time taken:  0.001008749008178711
+
+"""
+14) Program for Parsing and Processing URL
+"""
+#From GOG
+def URL_parse(x: str):
+    a = re.findall('(\w+)://',x)
+    b = re.findall('://www.([\w\-\.]+)',x)
+    return "Hostname: ",b,"\n Protocol: ",a
+print(URL_parse(url))
+#Time taken:  0.0009968280792236328
+
+"""
+15) Program to Check if email address valid or not
+"""
+def isValidemail(str: str):
+    """
+    Input: String
+    Output: Boolean
+    Checks if the Email are valid or not
+    """
+    regex = (r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b")
+    p = re.compile(regex)
+    if (str == None):
+        return False
+    if(re.search(p, str)):
+        return "Valid Email"
+    else:
+        return "Invalid Email"
+print(isValidemail(email))
+#Time taken:  0.0009975433349609375
+
+"""
+16) Program to find files having a particular extension
+"""
+def file_extension(x: list):
+    """
+    Input: String
+    Output: String
+    This finds the given file extension from the list of files.
+    """
+    for file in x:
+        # search given pattern in the line 
+        match = re.search("\.xml$", file)
+    
+        # if match is found
+        if match:
+            return("The file ending with .xml is:",file)
+print(file_extension(filenames))
+#Time taken:  0.000997304916381836
+
+"""
+17) Program to check the validity of a Password
+"""
+#from GOG
+def password_check(x: str):
+    """
+    Input: String
+    Output: String
+    Checks if the password passes all the conditions
+    """
+    flag = 0
+    while(True):
+        if(len(x)<8):
+            flag = -1
+            break
+        elif not re.search("[a-z]",x):
+            flag = -1
+            break
+        elif not re.search("[A-Z]",x):
+            flag = -1
+            break
+        elif not re.search("[0-9]",x):
+            flag = -1
+            break
+        elif not re.search("[_@$]",x):
+            flag = -1
+            break
+        elif re.search("\s",x):
+            flag = -1
+            break
+        else:
+            return "Valid Password"
+            break
+    if flag == -1:
+        return "Invalid Password"
+print(password_check(password))
+#Time taken:  0.0009927749633789062
+
+"""
+18) Program to Categorize Password as Strong or Weak using Regex in Python
+"""
+#From GOG
+# Minimum 9 characters and maximum 20 characters.
+# Cannot be a newline or a space
+# There should not be three or more repeating characters in a row.
+# The same string pattern(minimum of two character length) should not be repeating.
+def password_categorize(x):
+    #If password is newline or space
+    if x == '\n' or x == " ":
+        return "Password Cannot be a newline or space"
+    if 9<=len(x)<=20:
+        #if character repeated 3 times or more consecutively
+        if re.search(r"(.)\1\1",x):
+            return "Weak Password: Password cannot repeat three or more times in a row"
+        #if substring is rereated
+        if re.search(r"(..)(.*?)\1",x):
+            return "Weak Password: Same pattern repeated in Password"
+        else:
+            return "Strong Password"
+    else:
+        return "Password length must be in 9-20 Characters"
+print(password_categorize(password))
+#Time taken:  0.0009965896606445312

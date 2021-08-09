@@ -1,5 +1,6 @@
 # Python Program Package
-This Repository contains basic python programs, taken from multiple sites.
+
+This Repository contains Python programs.
 
 <hr>
 
@@ -186,12 +187,22 @@ This Repository contains basic python programs, taken from multiple sites.
         9) Program to Remove all characters except letters and numbers <3 Ways>
         10) Program to accept string ending with alphanumeric character <1 Way Only>
         11) Program to accept string starting with vowel <1 Way Only>
-        12) Program to check if a string starts with a substring using regex <2 Ways>        
+        12) Program to check if a string starts with a substring using regex <2 Ways>       
+        13) Program to Check if an URL is valid or not using Regular Expression
+        14) Program for Parsing and Processing URL <1 Way Only>
+        15) Program to Check if email address valid or not <1 Way Only>
+        16) Program to find files having a particular extension <1 Way Only>
+        17) Program to check the validity of a Password <1 Way Only>
+        18) Program to Categorize Password as Strong or Weak using Regex in Python <1 Way Only>
 
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
     2) HR Site Programs <16 Question>
     3) Udemy Programs <1 Question>
+
+## 3) GUI Program Folder :
+    1) Tkinter - Contains notes and practice programs.
+    2) Turtle Graphics
 
 
 ## Purpose Of This Repository
