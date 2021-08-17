@@ -288,3 +288,13 @@ for i in range(1,int(y)+1):
     z = list(combinations(x,i))
     for j in z:
         print(''.join(j))
+
+"""
+18) Set Intersection
+"""
+n = int(input())
+x = set(map(int,input().split()))
+n1 = int(input())
+x1 = set(map(int,input().split()))
+z = x.intersection(x1)
+print(len(z))

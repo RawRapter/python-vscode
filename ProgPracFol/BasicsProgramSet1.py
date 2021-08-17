@@ -2,7 +2,7 @@
 """
 1) Basic Factorial Program using function and recursion
 """
-def factorial(x):
+def factorial(x: int)->int:
     f = 1
     if x < 0:
         return "Factorial of negative number doesn't exist"
@@ -52,7 +52,7 @@ print("")
 """
 import math
 num1 = 371
-def armstrong(num):
+def armstrong(num: int)->str:
     n = 0
     result = 0
     copynum = num
@@ -79,7 +79,7 @@ print("")
 6) Basic Program to check if number is palindrome or not
 """
 num2 = 121
-def palindrome(d):
+def palindrome(d: int)-> str:
     remainder = 0
     revnum = 0
     n = len(str(d))
@@ -98,7 +98,7 @@ print("")
 7) Basic Program to find fibonacci till specific place Method 1, Method 2 at 14
 """
 e = 8 #we want first 8 fibonacci number
-def fibonacci(e):
+def fibonacci(e: int):
     r,t,count1 = 0,1,0
     print(r,"",t,end=" ")
     while(count1<e):
@@ -187,7 +187,7 @@ else:
 14) Basic Program to get a nth fibonacci Number Method 2
 """
 num4 = int(input("Enter Number at which you want fibonacci number"))
-def fibonnaci2(num4):
+def fibonnaci2(num4: int)-> int:
     if num4 < 0:
         print("Incorrect number please write positive number")
     elif num4 == 1:
@@ -201,8 +201,8 @@ print("Fibonacci Number at ",num4," is ",fibonnaci2(num4))
 15) Basic Program to check if given number is fibonacci
 """
 num5 = int(input("Enter Number to check if given number is fibonacci"))
-def fibonnaci3(d):
-    def isperfectsquare(x):
+def fibonnaci3(d: int):
+    def isperfectsquare(x: int):
         s = int(math.sqrt(x))
         return s*s == x
     def fibonaci(d):

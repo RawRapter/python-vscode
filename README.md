@@ -194,6 +194,9 @@ This Repository contains Python programs.
         16) Program to find files having a particular extension <1 Way Only>
         17) Program to check the validity of a Password <1 Way Only>
         18) Program to Categorize Password as Strong or Weak using Regex in Python <1 Way Only>
+    
+    12) Miscellaneous Programs Folder
+        1) Linked List implementation using class
 
 ## 2) Program Sites Folder :
     1) Guvi Site: https://www.guvi.in/ programs <7 Beginner Programs>
@@ -217,6 +220,12 @@ To show there are multiple ways to a same Requirements with different run time s
 - Guvi
 - Udemy
 - Hacker Rank
+
+## Abbreviation
+- PGPF - ProgGUIPracFol
+- PPF - ProgPracFol
+- MP - Miscellaneous Programs
+- PSF - ProgSitesFol
 
 ## Feedback
 

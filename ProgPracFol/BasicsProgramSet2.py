@@ -7,7 +7,7 @@
 """
 l1 = [1,2,3,4]
 #Method 1, Using function
-def arraysum(x):
+def arraysum(x: int)->int:
     sum = 0
     for i in x:
         sum += i
@@ -25,8 +25,9 @@ print("Here the sum is ",fs.reduce(lambda x,y: x + y , l1))
 """
 2) Basic Program to find largest element in an array
 """
+#Method 1
 l2 = [1,7,2,5,8,3,10,12,6,9]
-def maxlist(x):
+def maxlist(x: int)->int:
     max = x[0]
     for i in range(0,len(x)):
         if x[i] > max:
@@ -34,12 +35,15 @@ def maxlist(x):
     return max
 print(maxlist(l2))
 
+#Method 2
+print(max(l2))
+
 """
 3) Basic Program for array rotation
 """
 #Using the same list of above program
 #Method 1 , by creating empty list and manipulating from that
-def arrRotation(x,d):
+def arrRotation(x: list,d: int)->list:
     arr = []
     for i in range(0,d):
         arr.append(x[i])
@@ -53,11 +57,11 @@ d = int(input("Enter number of Indexes to be rotated: "))
 print(arrRotation(l2,d))
 
 #Method 2, by really rotating the array
-def leftrotate(x,d,n):
+def leftrotate(x: list,d: int,n: int):
     for i in range(d):
         leftrotating(x,n)
     return x
-def leftrotating(x,n):
+def leftrotating(x: list,n: int):
     temp = x[0]
     for i in range(n-1):
         x[i] = x[i+1]
@@ -68,7 +72,7 @@ print(leftrotate(l2,2,len(l2)))
 4) Basic Program to Split the array and add the first part to the end
 """
 #Using the first method if array rotation as it is doing the same
-def arrRotation(x,d):
+def arrRotation(x: list,d: int):
     arr = []
     for i in range(0,d):
         arr.append(x[i])
@@ -134,6 +138,6 @@ def monotonic(a):
 print(monotonic(l3))
 
 #Method 2 Pythonic way using all() function
-def monotonic1(a):
+def monotonic1(a: list)-> bool:
     return all(a[i] >= a[i+1] for i in range(len(a)-1)) or all(a[i] <= a[i+1] for i in range(len(a)-1))
 print(monotonic1(l3))
