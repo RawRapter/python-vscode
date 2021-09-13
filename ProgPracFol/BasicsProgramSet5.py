@@ -399,7 +399,7 @@ print(MostFrequentCharacter2(b))
 #Time taken:  0.0009953975677490234
 
 """
-15) Basic program to Program to check if a string contains any special character
+15) Basic program to check if a string contains any special character
 """
 #Method 1, regular expression and compile() is used
 def StringSpecialCharCheck(x):

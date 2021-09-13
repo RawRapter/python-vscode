@@ -479,7 +479,7 @@ for i in range(n1,n2 + 1):
 #Time taken:  1.2213096618652344
 
 """
-18) Basic program to print all positive numbers in a range
+18) Basic program to print all negative numbers in a range
 """
 n1 = int(input("Start: "))
 n2 = int(input("End: "))
