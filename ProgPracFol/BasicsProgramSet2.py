@@ -8,6 +8,11 @@
 l1 = [1,2,3,4]
 #Method 1, Using function
 def arraysum(x: int)->int:
+    """
+    These function gives sum of all elements of list by iterating through loop and adding them.
+    Input: Integer
+    Output: Interger
+    """
     sum = 0
     for i in x:
         sum += i
@@ -44,6 +49,11 @@ print(max(l2))
 #Using the same list of above program
 #Method 1 , by creating empty list and manipulating from that
 def arrRotation(x: list,d: int)->list:
+    """
+    The given function is first is first appending the elements to another array
+    till which the index is given, then removing those element from the given array
+    then appending the elements of the another array to the given array.
+    """
     arr = []
     for i in range(0,d):
         arr.append(x[i])
@@ -58,10 +68,17 @@ print(arrRotation(l2,d))
 
 #Method 2, by really rotating the array
 def leftrotate(x: list,d: int,n: int):
+    """
+    This function is calling the leftrotating function till the index required.
+    """
     for i in range(d):
         leftrotating(x,n)
     return x
 def leftrotating(x: list,n: int):
+    """
+    The function is rotating the elements of the list by 1 shift. copy first element in temp,
+    shifting all elements by overwriting them to left and copying temp to last element.
+    """
     temp = x[0]
     for i in range(n-1):
         x[i] = x[i+1]
@@ -73,6 +90,11 @@ print(leftrotate(l2,2,len(l2)))
 """
 #Using the first method if array rotation as it is doing the same
 def arrRotation(x: list,d: int):
+    """
+    The given function is first is first appending the elements to another array
+    till which the index is given, then removing those element from the given array
+    then appending the elements of the another array to the given array.
+    """
     arr = []
     for i in range(0,d):
         arr.append(x[i])
@@ -104,6 +126,11 @@ arrayproduct = reduce(lambda x,y: x*y , Arrayremainder)
 finalanswer = arrayproduct % divno
 print(finalanswer)
 # Time Taken - 0.0019919872283935547
+
+# Method 3, shorter version
+Multivalue = reduce(lambda x,y:x*y,l2)
+result = Multivalue % 5
+print(result)
 
 """
 6) Basic Program to check if given array is Monotonic

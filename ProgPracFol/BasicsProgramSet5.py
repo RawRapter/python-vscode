@@ -256,7 +256,7 @@ def EvenLengthWords(x):
 print(EvenLengthWords(str))
 #Time taken:  0.0009968280792236328
 
-#Method 2, using lise comprehension
+#Method 2, using list comprehension
 def EvenLengthWords1(x):
     return [i for i in x.split() if len(i)%2 == 0]
 print(EvenLengthWords(str))

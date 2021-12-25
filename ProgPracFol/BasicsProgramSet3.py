@@ -468,7 +468,7 @@ n1 = int(input("Start: "))
 n2 = int(input("End: "))
 
 #Method 1, Using List Comprehension
-pos = [i for in range(n1,n2 + 1) if i > 0]
+pos = [i for i in range(n1,n2 + 1) if i > 0]
 print(pos)
 #Time taken:  2.662982940673828
 
@@ -496,7 +496,7 @@ for i in range(n1,n2 + 1):
 #Time taken:  1.3188226222991943
 
 """
-19) Basic Remove multiple elements from a list in Python
+19) Basic program to Remove multiple elements from a list in Python
 """
 
 #Method 1, using List comprehension
@@ -508,7 +508,7 @@ main1 = [i for i in L1 if i not in x]
 print(main1)
 
 """
-20) Basic Remove empty List from List
+20) Basic program to Remove empty List from List
 """
 #Method 1, using list comprehension
 print(L7)
@@ -612,7 +612,7 @@ print(RemoveEmptyTuple1(tuples))
 #Time taken:  0.0010187625885009766
 
 """
-24) Basic Program to print duplicates from a list of integers
+24) Basic Program to remove duplicates from a list of integers
 """
 #Method 1, converting to set
 def RemoveDuplicate(x):
