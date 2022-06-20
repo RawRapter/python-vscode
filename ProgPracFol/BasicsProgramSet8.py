@@ -1,7 +1,7 @@
 """
 This Set is related to all searching and sorting programs
 """
-#Arrays
+#Arrays (List)
 arr1 = [ 2, 3, 4, 10, 40, 70, 90 ]
 arr2 = [5,3,6,2,65,34,23,76,12,9]
 

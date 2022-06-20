@@ -500,7 +500,7 @@ print(CounterFreq(str5))
 """
 26) Basic Program for Keys associated with Values in Dictionary
 """
-#From GOG
+#From GFG
 def Valtokey(x):
     result = defaultdict(list)
     for key,val in x.items():

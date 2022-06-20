@@ -297,7 +297,7 @@ print(string_starts_substring1(j,e))
 """
 13) Program to Check if an URL is valid or not using Regular Expression
 """
-#From GOG
+#From GFG
 def isValidURL(str: str):
     """
     Input: String
@@ -322,7 +322,7 @@ print(isValidURL(url))
 """
 14) Program for Parsing and Processing URL
 """
-#From GOG
+#From GFG
 def URL_parse(x: str):
     a = re.findall('(\w+)://',x)
     b = re.findall('://www.([\w\-\.]+)',x)
@@ -372,7 +372,7 @@ print(file_extension(filenames))
 """
 17) Program to check the validity of a Password
 """
-#from GOG
+#from GFG
 def password_check(x: str):
     """
     Input: String
@@ -410,7 +410,7 @@ print(password_check(password))
 """
 18) Program to Categorize Password as Strong or Weak using Regex in Python
 """
-#From GOG
+#From GFG
 # Minimum 9 characters and maximum 20 characters.
 # Cannot be a newline or a space
 # There should not be three or more repeating characters in a row.

@@ -619,7 +619,7 @@ print(StringPermutation1('anant'))
 """
 23) Basic program to Check for URL in a String
 """
-#From GOG
+#From GFG
 #Method 1, using regex, code from geek of geeks
 def FindURL(x):
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
@@ -632,7 +632,7 @@ print("URL is: ",FindURL(GivenString))
 """
 24) Basic Program to Execute a String of Code in Python
 """
-#From GOG
+#From GFG
 #Method 1
 def execString():
     code = """
@@ -660,7 +660,7 @@ print(rotateString(strb,k))
 """
 26) Basic Program to String slicing in Python to check if a string can become empty by recursive deletion
 """
-#From GOG
+#From GFG
 #Method 1
 def CheckStringPatternDel(x,pattern):
     if len(x) == 0 and len(pattern) == 0:

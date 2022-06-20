@@ -5,7 +5,7 @@ This Set has Pattern Programs
 """
 1) G pattern
 """
-#From GOG
+#From GFG
 def Pattern(line):
     pat=""
     for i in range(0,line):   

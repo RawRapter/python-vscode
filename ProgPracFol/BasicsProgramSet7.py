@@ -98,7 +98,7 @@ print(tuple(list(Tuple2) + list1))
 """
 5) Program to Join Tuples if similar initial element
 """
-#Using dictionary from GOG
+#Using dictionary from GFG
 def JoinIntialEletuple(x):
     rsult = []
     for i in x:
@@ -114,7 +114,7 @@ print(JoinIntialEletuple(list2))
 """
 6) Program to Extract digits from Tuple list
 """
-#From GOG
+#From GFG
 def ExtractDigits(x):
     temp = re.sub(r'[\[\]\(\), ]', '', str(x))
     res = [int(ele) for ele in set(temp)]
