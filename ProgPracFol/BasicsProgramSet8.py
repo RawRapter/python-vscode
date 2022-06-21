@@ -128,3 +128,31 @@ def DisplayQS(x):
         print(x[i],end=" ")
 DisplayQS(arr2)
 #Time taken:  0.0039958953857421875
+
+"""
+5) Selection Sort
+"""
+def SelectionSort(x):
+    n = len(x)
+    i = 0
+    while(i<n):
+        for j in range(i+1,n):
+            if(x[j]<x[i]):
+                x[i],x[j] = x[j],x[i]
+        i=i+1
+    return x
+SelectionSort(arr2)
+
+"""
+6) Bubble Sort
+"""
+def BubbleSort(x):
+    n = len(x)
+    i = 0
+    while(i<n):
+        for j in range(0,n-i-1):
+            if(x[j]>x[j+1]):
+                x[j],x[j+1] = x[j+1],x[j]
+        i=i+1
+    return x
+BubbleSort(arr2)
