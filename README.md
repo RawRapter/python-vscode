@@ -11,7 +11,7 @@ This Repository contains Python programs.
 
 <hr>
 
-**Important Note** : Every program have multiple methods , they include my original logic and also from different programming sites.
+**Important Note** : Every program have multiple methods , they include my logic and also from different programming sites.
 
 ## 1) Program Practice Folder :
 
@@ -204,14 +204,25 @@ This Repository contains Python programs.
     3) Udemy Programs <1 Question>
     4) YouTube
         1) Kadane Algorithm
+        2) Maximum Sum Circular Sub Array
+    5) Geeks For Geeks
+        1) Find Duplicate in List
 
 ## 3) GUI Program Folder :
     1) Tkinter - Contains notes and practice programs.
+        1) Notes Folder
+        2) Basic TKinter Programs
     2) Turtle Graphics
+        1) Kaleido Spiral
+        2) Modified Kaleido Spiral
+        3) Robot
+        4) Modified Robot
+        5) Moving Turtle
 
 
 ## Purpose Of This Repository
-To show there are multiple ways to a same Requirements with different run time so that one can understand the difference between various logic.
+1) To show there are multiple ways to a same Requirements with different run time so that one can understand the difference between various logic.
+2) To create directory for all the codes I write.
 
 ## Tech Stack
 
@@ -222,12 +233,16 @@ To show there are multiple ways to a same Requirements with different run time s
 - Guvi
 - Udemy
 - Hacker Rank
+- YouTube
 
 ## Abbreviation
 - PGPF - ProgGUIPracFol
 - PPF - ProgPracFol
 - MP - Miscellaneous Programs
 - PSF - ProgSitesFol
+- GFG - Geeks for Geeks
+- YT - You Tube
+- HR - Hacker Rank
 
 ## Feedback
 

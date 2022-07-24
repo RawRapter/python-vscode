@@ -12,12 +12,15 @@ coord = 210,300,360,370
 def pr():
     print("Hello")
 
+def pr1():
+    print("Anant Arun")
+    
 """Adding Dimension"""
 #win.geometry("500x500")
 
 """Creating button widget and showing them"""
 b = Button(win,text='Button',command=pr,padx=5,pady=5,activeforeground='blue')
-b1 = Button(win,text='Button1',padx=5,pady=5)
+b1 = Button(win,text='Button1',command=pr1,padx=5,pady=5)
 
 #pack function shows button(widget) wherever it can
 #b.pack()
