@@ -109,7 +109,7 @@ print(SymmetricalString1(c))
 """
 #Method 1, using regular expression
 def ReverseWords(x):
-    str1 = re.split('\s',x)
+    str1 = re.split(r'\s',x)
     str2 = ''
     for i in str1[:0:-1]:
         str2 = str2 + i + ' '
@@ -136,6 +136,11 @@ def ReverseWords2(x):
     return r
 print(ReverseWords2(str))
 #Time taken:  0.000997304916381836
+
+#Method 4, Pythonic way
+def ReverseWords3(x):
+    return " ".join(x.split()[::-1])
+print(ReverseWords3(str))
 
 """
 4) Basic Program to remove i’th character from string in Python
@@ -184,7 +189,7 @@ else:
 """
 #Method 1, using regex & dictionary comprehension
 def wordcount(x):
-    res = re.split('\s',x)
+    res = re.split(r'\s',x)
     return {key:x.count(key) for key in res}
 print(wordcount(stra))
 #Time taken:  0.002000093460083008
@@ -346,7 +351,7 @@ print(RemoveStringDuplicates1(str))
 #Method 1, using dictionary comprehension and min()
 def LessFrequentCharacter(x):
     l =  {key:x.count(key) for key in list(x)}
-    return min(l,key=l.get)
+    return min(l,key=lambda x: l[x])
 print(LessFrequentCharacter(b))
 #Time taken:  0.000997304916381836
 
@@ -358,14 +363,14 @@ def LessFrequentCharacter1(x):
             l[i] += 1
         else:
             l[i] = 1
-    return min(l,key=l.get)
+    return min(l,key=lambda x: l[x])
 print(LessFrequentCharacter1(b))
 #Time taken:  0.0009980201721191406
 
 #Method 3, using counter
 def LessFrequentCharacter2(x):
     l = Counter(x)
-    return min(l,key=l.get)
+    return min(l,key=lambda x: l[x])
 print(LessFrequentCharacter2(b))
 #Time taken:  0.001001119613647461
 
@@ -375,7 +380,7 @@ print(LessFrequentCharacter2(b))
 #Method 1, using dictionary comprehension and min()
 def MostFrequentCharacter(x):
     l =  {key:x.count(key) for key in list(x)}
-    return max(l,key=l.get)
+    return max(l,key=lambda x: l[x])
 print(MostFrequentCharacter(b))
 #Time taken:  0.0010006427764892578
 
@@ -387,14 +392,14 @@ def MostFrequentCharacter1(x):
             l[i] += 1
         else:
             l[i] = 1
-    return max(l,key=l.get)
+    return max(l,key=lambda x: l[x])
 print(MostFrequentCharacter1(b))
 #Time taken:  0.000997781753540039
 
 #Method 3, using counter
 def MostFrequentCharacter2(x):
     l = Counter(x)
-    return max(l,key=l.get)
+    return max(l,key=lambda x: l[x])
 print(MostFrequentCharacter2(b))
 #Time taken:  0.0009953975677490234
 
@@ -403,7 +408,7 @@ print(MostFrequentCharacter2(b))
 """
 #Method 1, regular expression and compile() is used
 def StringSpecialCharCheck(x):
-    spec = re.compile("[@_!#$%^&*()<>?/\|}{~:]")
+    spec = re.compile(r"[@_!#$%^&*()<>?/\|}{~:]")
     if spec.search(x) == None:
         return "No Special Character string is accepted"
     else:
@@ -414,7 +419,7 @@ print(StringSpecialCharCheck(a))
 #Method 2,Naive Method -  Using loops, if method
 def StringSpecialCharCheck1(x):
     k = True
-    j = "[@_!#$%^&*()<>?/\|}{~:]"
+    j = r"[@_!#$%^&*()<>?/\|}{~:]"
     for i in x:
         if i in j:
             k = False
@@ -438,7 +443,7 @@ print(StringLengthCheck(str))
 
 #Method 2 , Naive method
 def StringLengthCheck1(x):
-    k = input("Give the length limit: ")
+    k = int(input("Give the length limit: "))
     str1 = []
     splits = x.split()
     for i in splits:
@@ -502,7 +507,7 @@ print(StringSplitJoin(str))
 
 #Method 3, using regex
 def StringSplitJoin1(x):
-    x = re.sub("\s","-",x)
+    x = re.sub(r"\s","-",x)
     return x
 print(StringSplitJoin1(str))
 #Time taken:  0.003983259201049805
@@ -583,13 +588,13 @@ def ReplaceDuplicate(x):
 print(ReplaceDuplicate(strd))
 #Time taken:  0.003998756408691406
 
-#Method 2, using list comprehension , index() , dictionary
+#Method 2, using list comprehension , index() , dictionary [Not Working, need updation]
 def ReplaceDuplicate1(x):
     split1 = x.split()
     replace_dict = {'anant':'he','PEC':'it'}
-    result = ' '.join([replace_dict.get(val) if val in replace_dict.keys() and split1.index(val) != idx
-    else val for idx,val in enumerate(split1)])
-    return result
+    x1 = [replace_dict.get(val) if val in replace_dict.keys() and split1.index(val) != idx else val for idx,val in enumerate(split1)]
+    #result = ' '.join(x1)
+    #return result
 print(ReplaceDuplicate1(strd))
 #Time taken:  0.0009970664978027344
 

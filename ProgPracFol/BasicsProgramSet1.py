@@ -2,7 +2,7 @@
 """
 1) Basic Factorial Program using function and recursion
 """
-def factorial(x: int)->int:
+def factorial(x: int):
     """
     Function is calculating the factorial of the given integer using recursion method.
     Input: Integer
@@ -228,7 +228,7 @@ else:
 14) Basic Program to get a nth fibonacci Number Method 2
 """
 num4 = int(input("Enter Number at which you want fibonacci number"))
-def fibonnaci2(num4: int)-> int:
+def fibonnaci2(num4: int):
     """
     Function is using recursion method and is giving end result only
     Input: Integer

@@ -166,6 +166,6 @@ print(lst)
 j1 = [['anant', 'good'], ['arun', 'great']]
 
 #Method 1 , using zip and list comprehension
-j3 = [x + y for x,y in zip(*j1)]
+j3 = [' '.join(x) for x in zip(*j1)]
 print(j3)
 #Time taken:  0.0009992122650146484

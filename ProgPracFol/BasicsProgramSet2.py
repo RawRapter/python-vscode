@@ -7,7 +7,7 @@
 """
 l1 = [1,2,3,4]
 #Method 1, Using function
-def arraysum(x: int)->int:
+def arraysum(x: list)->int:
     """
     These function gives sum of all elements of list by iterating through loop and adding them.
     Input: Integer
@@ -32,7 +32,7 @@ print("Here the sum is ",fs.reduce(lambda x,y: x + y , l1))
 """
 #Method 1
 l2 = [1,7,2,5,8,3,10,12,6,9]
-def maxlist(x: int)->int:
+def maxlist(x: list)->int:
     max = x[0]
     for i in range(0,len(x)):
         if x[i] > max:
@@ -50,8 +50,8 @@ print(max(l2))
 #Method 1 , by creating empty list and manipulating from that
 def arrRotation(x: list,d: int)->list:
     """
-    The given function is first is first appending the elements to another array
-    till which the index is given, then removing those element from the given array
+    The given function first appending the elements to another array
+    till which the index is given to rotate it, then removing those element from the given array
     then appending the elements of the another array to the given array.
     """
     arr = []
@@ -89,7 +89,7 @@ print(leftrotate(l2,2,len(l2)))
 4) Basic Program to Split the array and add the first part to the end
 """
 #Using the first method if array rotation as it is doing the same
-def arrRotation(x: list,d: int):
+def arrRotation1(x: list,d: int):
     """
     The given function is first is first appending the elements to another array
     till which the index is given, then removing those element from the given array
@@ -104,7 +104,7 @@ def arrRotation(x: list,d: int):
         x.append(i)
     return x
 d = int(input("Enter number of Indexes to be rotated: "))
-print(arrRotation(l2,d))
+print(arrRotation1(l2,d))
 """
 5) Program for Find reminder of array multiplication divided by n
 """

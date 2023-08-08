@@ -70,7 +70,7 @@ print(LinearSearch(arr2,12))
 #Time taken:  0.0010023117065429688
 
 #Method 2, simpler than above
-def LinearSearch(x,k):
+def LinearSearch1(x,k):
     for i in x:
         if i == k:
             return "Element Found"
@@ -90,7 +90,7 @@ def InsertionSort(x):
             x[j+1] = x[j]
             j -= 1
         x[j+1] = key
-def TraversingIS(x):
+def TraversingIS(x: list):
     InsertionSort(x)
     for i in range(len(x)):
         print(x[i],end=" ")
@@ -121,7 +121,7 @@ def QuickSort(arr, low, high):
         QuickSort(arr, pi+1, high)
 
 #displaying function
-def DisplayQS(x):
+def DisplayQS(x: list):
     n = len(x)
     QuickSort(x,0,n-1)
     for i in range(n):
@@ -132,7 +132,7 @@ DisplayQS(arr2)
 """
 5) Selection Sort
 """
-def SelectionSort(x):
+def SelectionSort(x: list)->list:
     n = len(x)
     i = 0
     while(i<n):
@@ -146,7 +146,7 @@ SelectionSort(arr2)
 """
 6) Bubble Sort
 """
-def BubbleSort(x):
+def BubbleSort(x: list)->list:
     n = len(x)
     i = 0
     while(i<n):

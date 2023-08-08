@@ -124,7 +124,7 @@ def max_num1(x: str)->int:
     Output: Integer
     Finds the maximum integer in the string
     """
-    c = re.findall("\d+",x)
+    c = re.findall(r"\d+",x)
     n = map(int,c)
     return max(n)
 print(max_num1(b))
@@ -207,7 +207,7 @@ def remove_non_characters(x: str)->str:
     Output: String
     Removes everything that is not letters or numbers.
     """
-    x = re.sub("[\W_]+","",x)
+    x = re.sub(r"[\W_]+","",x)
     return x
 print(remove_non_characters(g))
 #Time taken:  0.0019991397857666016
@@ -324,8 +324,8 @@ print(isValidURL(url))
 """
 #From GFG
 def URL_parse(x: str):
-    a = re.findall('(\w+)://',x)
-    b = re.findall('://www.([\w\-\.]+)',x)
+    a = re.findall(r'(\w+)://',x)
+    b = re.findall(r'://www.([\w\-\.]+)',x)
     return "Hostname: ",b,"\n Protocol: ",a
 print(URL_parse(url))
 #Time taken:  0.0009968280792236328
@@ -361,7 +361,7 @@ def file_extension(x: list):
     """
     for file in x:
         # search given pattern in the line 
-        match = re.search("\.xml$", file)
+        match = re.search(r"\.xml$", file)
     
         # if match is found
         if match:
@@ -396,7 +396,7 @@ def password_check(x: str):
         elif not re.search("[_@$]",x):
             flag = -1
             break
-        elif re.search("\s",x):
+        elif re.search(r"\s",x):
             flag = -1
             break
         else:
@@ -423,7 +423,7 @@ def password_categorize(x):
         #if character repeated 3 times or more consecutively
         if re.search(r"(.)\1\1",x):
             return "Weak Password: Password cannot repeat three or more times in a row"
-        #if substring is rereated
+        #if substring is repeated
         if re.search(r"(..)(.*?)\1",x):
             return "Weak Password: Same pattern repeated in Password"
         else:

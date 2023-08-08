@@ -43,14 +43,15 @@ print(interchange1(L1))
 #Time taken:  0.0009958744049072266
 
 """
-2) Basic program to swap two elements in a list(input list and 2 places to be swapped, taking first elements as position one(not index))
+2) Basic program to swap two elements in a list(input list and 2 places to be swapped, 
+taking first elements as position one(not index))
 """
 def Swap2ListEle(x,a,b):
     x[a],x[b] = x[b],x[a]
     return x
-a = input("Enter First Position: ")
-b = input("Enter Second Position: ")
-print(Swap2ListEle(L1,a -1,b -1))
+a = int(input("Enter First Position: "))
+b = int(input("Enter Second Position: "))
+print(Swap2ListEle(L1,a-1,b-1))
 #Time taken:  0.0010004043579101562
 
 """
@@ -432,33 +433,33 @@ print(PositiveList3(L5))
 16) Basic program to print negative numbers in a list
 """
 #Method 1 , List Comprehension
-def PositiveList(x):
+def NegativeList(x):
     return [ i for i in x if i < 0]
 print(PositiveList(L5))
 #Time taken:  0.0009975433349609375
 
 #Method 2, using filter
-def PositiveList1(x):
+def NegativeList1(x):
     return list(filter(lambda i : i < 0 , x))
-print(PositiveList1(L5))
+print(NegativeList1(L5))
 #Time taken:  0.0009953975677490234
 
 #Method 3 , Naive Method using for loop
-def PositiveList2(x):
+def NegativeList2(x):
     for i in x:
         if i < 0:
             print(i, end = " ")
-print(PositiveList2(L5))
+print(NegativeList2(L5))
 #Time taken:  0.0019981861114501953
 
 #Method 4 , Naive Method using while loop
-def PositiveList3(x):
+def NegativeList3(x):
     i = 0
     while i < len(x):
         if x[i] < 0:
             print(x[i], end = " ")
         i += 1    
-print(PositiveList3(L5))
+print(NegativeList3(L5))
 #Time taken:  0.0019979476928710938
 
 """
@@ -502,7 +503,7 @@ for i in range(n1,n2 + 1):
 #Method 1, using List comprehension
 print("Our List: \n",L1)
 n1 = int(input("Enter number of element you want to remove: "))
-x = list(map(int, input("Enter {n} value(s): ").split()))
+x = list(map(int, input("Enter {n1} value(s): ").split()))
 #x = [int(x) for x in input("Enter multiple value: ").split()]
 main1 = [i for i in L1 if i not in x]
 print(main1)
